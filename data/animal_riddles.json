@@ -1,0 +1,71 @@
+[{
+      "riddle_index": 1,
+      "riddle": "I have four legs but no tail, usually I am heard only at night; what am I?",
+      "answer": "frog",
+      "image_source": "https://secure.i.telegraph.co.uk/multimedia/archive/01891/clinging-on_1891797i.jpg",
+      "description": "lorem ipsum"
+   },
+   {
+      "riddle_index": 2,
+      "riddle": "What jumps when it walks and sits when it stands?",
+      "answer": "kangaroo",
+      "image_source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQw0unJpAIJ7hOe7J1yXGVyN_WxbadTEsfqkRTT2SwpO8Kd4_T",
+      "description": "lorem ipsum"
+   },
+   {
+      "riddle_index": 3,
+      "riddle": "I am small,sometimes as small as your thumb, I am light in the air and make quite a sound. You will hear me before you see me; what am I?",
+      "answer": "hummingbird",
+      "image_source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOfvCN1WosAgN1aPPMylRJOXROI4lrHk4FPi1Mxqy1EwKFLNqg",
+      "description": "lorem ipsum"
+   },
+   {
+      "riddle_index": 4,
+      "riddle": "The water in the sea is cold, It is as cold as ice, though I am not afraid at all, my coat is warm and nice; what am I?",
+      "answer": "polar bear",
+      "image_source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-L0VX9zlNWw5TgFh6MFTe6prB6Ns0HHaXrJLt87CdPFRstJC5rQ",
+      "description": "lorem ipsum"
+   },
+   {
+      "riddle_index": 5,
+      "riddle": "Armoured but not a knight, snapping but not a twig, and always at home even on the move; what am I?",
+      "answer": "turtle",
+      "image_source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV_WzEguq-x799lbSJf1B8fvV8CB37hYarK2ks8PmFSfuvRD8RNQ",
+      "description": "lorem ipsum"
+   },
+   {
+      "riddle_index": 6,
+      "riddle": "I create my lair with earthen string and dispatch my prey with a biting sting; what am I?",
+      "answer": "spider",
+      "image_source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-lJQHKrLQ5yKa6_r-GsS4HTK9AUpIANT3a1XdyqPBLZAlDT_qXA",
+      "description": "lorem ipsum"
+   },
+   {
+      "riddle_index": 7,
+      "riddle": "Born of water, I drown in water, a blood-thirsty beast but can you see me; what am I?",
+      "answer": "mosquito",
+      "image_source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu7C3ASSIOZSqKovxQLT1EM8OReVnksRd03UYZKw9XwZFSRJdX",
+      "description": "lorem ipsum"
+   },
+   {
+      "riddle_index": 8,
+      "riddle": "Alive without breath, as cold as death. All in mail but never clinking, never thirsty, always drinking; what am I?",
+      "answer": "fish",
+      "image_source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuLej8xF-k0Z5ZmIbQ5oQxEj9dWr5Xj1iSBhgte-SC1HTTLsC1Tw",
+      "description": "lorem ipsum"
+   },
+   {
+      "riddle_index": 9,
+      "riddle": "I am not an ox though I have horns, I am not a donkey though I carry a load. Wherever I go I leave silver behind, what am I",
+      "answer": "snail",
+      "image_source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCQ_TbJtNFKuYLQcGtMFxB2Plj_2LzxwpHYea4tm5gYpwF5q7q9Q",
+      "description": "lorem ipsum"
+   },
+   {
+      "riddle_index": 10,
+      "riddle": "Early in the morning I am the first to awaken, and my own sweet music I love making; what am I?",
+      "answer": "rooster",
+      "image_source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLKg-M8SV_RQUbUTT4VBbaJ3-WWnXjczUfpJOWUzATVwK3SHRBXw",
+      "description": "lorem ipsum"
+   }
+]
