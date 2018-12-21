@@ -3,7 +3,7 @@
 <div class="jumbotron text-center mt-4">
    <h2>Welcome To My Flask Riddle Game</h2>
    <p class="lead">Please register and login to play</p>
-   <a href="" class="btn btn-primary btn-lg">Register</a>
-   <a href="" class="btn btn-success btn-lg">Login</a>
+   <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg">Register</a>
+   <a href="{{ url_for('login') }}" class="btn btn-success btn-lg">Login</a>
 </div>
 {% endblock content %}
