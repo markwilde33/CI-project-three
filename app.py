@@ -84,6 +84,13 @@ def register():
 def login():
     return render_template('login.html')
 
+# route to the  start quiz page
+
+
+@app.route('/start_quiz')
+def start_quiz():
+    return render_template('start_quiz.html')
+
 
 if __name__ == '__main__':
     initialize()
