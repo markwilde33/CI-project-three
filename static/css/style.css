@@ -1,0 +1,54 @@
+body,
+html {
+   width: 100%;
+   height: 100%;
+}
+
+
+/*--------------------------------------------Images&Cards*/
+
+.thumbnail img {
+   height: 400px;
+   width: 100%;
+   box-shadow: 3px 4px 7.4px 0.6px rgba(0, 0, 0, 0.2);
+}
+
+
+.card {
+   box-shadow: 3px 4px 7.4px 0.6px rgba(0, 0, 0, 0.2);
+}
+
+.card,
+.card-text {
+   width: 100%;
+   height: auto;
+   padding: 0;
+   margin: 0;
+
+}
+
+.card-body {
+   padding: 5px;
+}
+
+/*--------------------------------------------Jumbotron styles*/
+
+.style-one {
+   margin-top: 80px;
+   margin-bottom: 30px;
+   color: #ffffff;
+   background-image: url("../../static/img/hia.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+.style-two {
+   margin-top: 80px;
+   margin-bottom: 30px;
+   color: black;
+   background-image: url("../../static/img/landscape.jpeg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
