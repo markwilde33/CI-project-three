@@ -6,7 +6,7 @@
    <p class="lead pt-4">This application is a Code Institute project, built with Python & Flask</p>
    <h2 class="text-center"><small>Welcome {{session.name}}</small></h2>
 
-   <button type="button" class="flash-button" href="">Play Quiz</button>
+   <button type="button" class="flash-button btn-lg" href="">Play Quiz</button>
 </div>
 <div class="container-fluid">
    <div class="row">
@@ -15,22 +15,26 @@
             <img class="mb-4  img-fluid rounded" src="static/img/wolf.jpg" alt="Two wolves">
          </div>
       </div>
-      <div class="card col-sm-12  col-md-4  h-100 mb-4 ">
-         <img class="card-img-top img-fluid w-100" src="static/img/yesplease.png" alt="Card image cap">
-         <div class="card-body riddle-card">
-            <p class="card-text">
-               <h1 class="text-center">Rules:</h1>
-
-               <div class="text-left">
+      <div class="card-riddle col-sm-12  col-md-4  h-100 mb-4 ">
+         <img class="card-img-top img-fluid w-100" src="static/img/yesplease.png" alt="riddle">
+         <div class="card-body-riddle riddle-card">
+            <p class="card-text-riddle">
+               <div>
                   <ol>
-                     <li>Maximum three attempts per riddle</li>
-                     <li>Five points for each correct answer</li>
-                     <li>Lose one point for each wrong answer</li>
+                     <li>
+                        <strong>Three attempts allowed per riddle</strong>
+                     </li>
+                     <br>
+                     <li>
+                        <strong>Five points for each correct answer</strong>
+                     </li>
+                     <br>
+                     <li>
+                        <strong>Lose a point for each wrong answer</strong>
+                     </li>
                   </ol>
                   <br>
                </div>
-
-
          </div>
       </div>
       <div class="col-sm-12  col-md-4 h-100">
