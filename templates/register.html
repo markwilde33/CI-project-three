@@ -1,15 +1,29 @@
 {% extends 'base.html' %}
-{% block content %}
-<h2>Registration page</h2>
-{% from "includes/_formhelpers.html" import render_field %}
-<form method="POST">
-   <div class="form-group">
-      {{render_field(form.name, class="form-control")}}
-   </div>
-   <div class="form-group">
-      {{render_field(form.password, class="form-control")}}
-   </div>
 
-   <p><input type="submit" class="btn btn-primary" value="Register"></p>
-</form>
+{% block content %}
+<div class=" container reg-log-img ">
+   <div class="d-flex justify-content-center ">
+      <div class="card">
+         <div class="card-body text-center">
+            {% from "includes/_formhelpers.html" import render_field %}
+            <form action="" method="POST">
+               <div class="input-group form-group">
+                  <div class="form-group">
+                     {{render_field(form.name, class_="form-control")}}
+                  </div>
+               </div>
+               <div class="input-group form-group">
+                  <div class="form-group">
+                     {{render_field(form.password, class_="form-control")}}
+                  </div>
+               </div>
+               <div class="form-group">
+                  <input type="submit" value="Register" class="btn reg_btn">
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
 {% endblock content %}
