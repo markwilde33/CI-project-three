@@ -1,7 +1,10 @@
-body,
-html {
+html,
+body {
    width: 100%;
    height: 100%;
+   margin: 0px;
+   background-color: whitesmoke;
+
 }
 
 
@@ -14,12 +17,12 @@ html {
 }
 
 
-.card {
+.card-riddle {
    box-shadow: 3px 4px 7.4px 0.6px rgba(0, 0, 0, 0.2);
 }
 
-.card,
-.card-text {
+.card-riddle,
+.card-text-riddle {
    width: 100%;
    height: auto;
    padding: 0;
@@ -27,8 +30,14 @@ html {
 
 }
 
-.card-body {
+.card-body-riddle {
    padding: 5px;
+}
+
+
+.riddle-card {
+   color: #fff;
+   background-color: black;
 }
 
 /*--------------------------------------------Jumbotron styles*/
@@ -126,7 +135,77 @@ html {
    }
 }
 
-.riddle-card {
-   color: #fff;
-   background-color: black;
+
+
+
+/*--------------------------------------------Login & Registration styles*/
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+.reg-log-img {
+
+   background-image: url("../../static/img/butterfly.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   /* background-position: center; */
+   /* display: block;
+   width: 100%; */
+   /* margin: 0%;
+   padding: 0%; */
+   height: 100%;
+   font-family: 'Numans', sans-serif;
+}
+
+.container {
+   height: 100%;
+   /* width: 100%; */
+   /* align-content: center; */
+}
+
+.card {
+   padding: 5px 100px;
+   height: 275px;
+   margin-top: 180px;
+   margin-bottom: auto;
+   width: 400px;
+   background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.card-body {
+   padding: 0px !important;
+}
+
+.card-header h3 {
+   color: white;
+}
+
+
+.input-group-prepend span {
+   width: 50px;
+   background-color: #1816CA;
+   color: white;
+   border: 0 !important;
+}
+
+input:focus {
+   outline: 0 0 0 0 !important;
+   box-shadow: 0 0 0 0 !important;
+
+}
+
+.login_btn,
+.reg_btn {
+   color: white;
+   background-color: #1816CA;
+   width: 100px;
+}
+
+.login_btn:hover,
+.reg_btn:hover {
+   color: black;
+   background-color: white;
+}
+
+/*--------------------------------------------Formhelpers styles*/
+.help-inline {
+   color: white !important;
 }
