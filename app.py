@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, flash, redirect, url_for, request
+from flask import Flask, render_template, flash, redirect, url_for, request, session
 from wtforms import Form, StringField, PasswordField, Label
 from wtforms.validators import DataRequired
 import json
@@ -13,6 +13,10 @@ LEADERBOARD_DATABASE = os.path.join(os.path.dirname(
 ANIMAL_RIDDLE_DATABASE = os.path.join(os.path.dirname(
     os.path.abspath(__file__)) + '/data/animal_riddles.json')
 
+# Set quiz rules
+MAX_ATTEMPT = 3
+CORRECT_SCORE = 5
+INCORRECT_SCORE = -1
 
 # ///Riddles list///
 animal_riddles = []
@@ -79,14 +83,37 @@ def register():
             return redirect(url_for('register'))
     return render_template('register.html', form=form)
 
+# route to and logic for the login page
 
-@app.route('/login')
+
+@app.route('/login', methods=['GET', 'POST'])
 def login():
+    if request.method == 'POST':
+        post_username = request.form['username']
+        post_password = request.form['password']
+        is_authenticated = False
+        registered_users = get_users()
+        for entry in registered_users['users']:
+            if entry['username'] == post_username:
+                if entry['password'] == post_password:
+                    is_authenticated = True
+                    session['logged_in'] = True
+                    session['name'] = entry['username']
+                    session['index'] = 0
+                    session['attempt'] = MAX_ATTEMPT
+                    session['score'] = 0
+                    flash('You are now logged in', 'success')
+                    return redirect(url_for('start_quiz'))
+                else:
+                    error = 'Invalid Password'
+                    return render_template('login.html', error=error)
+        if not is_authenticated:
+            error = 'Username does not exist'
+            return render_template('login.html', error=error)
     return render_template('login.html')
 
+
 # route to the  start quiz page
-
-
 @app.route('/start_quiz')
 def start_quiz():
     return render_template('start_quiz.html')
