@@ -2,7 +2,7 @@
 <!-- Found at http://flask.pocoo.org/docs/0.12/patterns/wtforms/ -->
 
 {% macro render_field(field) %}
-{{ field.label }}
+<span class="help-inline">{{ field.label }}</span>
 {{ field(**kwargs)|safe }}
 {% if field.errors %}
 {% for error in field.errors %}
