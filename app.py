@@ -1,6 +1,6 @@
 import os
 from flask import Flask, render_template, flash, redirect, url_for, request, session
-from wtforms import Form, StringField, PasswordField, Label
+from wtforms import Form, StringField, PasswordField
 from wtforms.validators import DataRequired
 import json
 
@@ -112,6 +112,13 @@ def login():
             return render_template('login.html', error=error)
     return render_template('login.html')
 
+
+# route to logout and return to login page
+@app.route('/logout')
+def logout():
+    session.clear()
+    flash('You are now logged out', 'success')
+    return redirect(url_for('login'))
 
 # route to the  start quiz page
 @app.route('/start_quiz')
