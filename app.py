@@ -142,6 +142,14 @@ def logout():
 def start_quiz():
     return render_template('start_quiz.html')
 
+# route to play the quiz
+
+
+@app.route('/play_quiz', methods=['GET'])
+@is_logged_in
+def play_quiz():
+    return render_template('play_quiz.html')
+
 
 if __name__ == '__main__':
     initialize()
