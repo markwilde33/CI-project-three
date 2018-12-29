@@ -1,8 +1,10 @@
 import os
+import json
 from flask import Flask, render_template, flash, redirect, url_for, request, session
 from wtforms import Form, StringField, PasswordField
 from wtforms.validators import DataRequired
-import json
+from functools import wraps
+
 
 app = Flask(__name__)
 # ///Set Database variables///
@@ -21,9 +23,8 @@ INCORRECT_SCORE = -1
 # ///Riddles list///
 animal_riddles = []
 
+
 # ///write to user and leaderboard databases///
-
-
 def initialize():
     # ///write to the user and database///
     if not os.path.exists(USER_DATABASE):
@@ -60,9 +61,8 @@ class RegisterForm(Form):
     name = StringField('Username', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
 
+
 # route to and logic for the registration page
-
-
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     form = RegisterForm(request.form)
@@ -83,9 +83,8 @@ def register():
             return redirect(url_for('register'))
     return render_template('register.html', form=form)
 
+
 # route to and logic for the login page
-
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -113,15 +112,33 @@ def login():
     return render_template('login.html')
 
 
+# wrapper function to ensure the user is logged in before having access to the quiz
+# Found at https://pythonprogramming.net/decorator-wrappers-flask-tutorial-login-required/
+def is_logged_in(f):
+    @wraps(f)
+    def wrap(*args, **kwargs):
+        if 'logged_in' in session:
+            return f(*args, **kwargs)
+        else:
+            flash(
+                'You are unauthorized to perform this action. Please register and/or login first', 'danger')
+            return redirect(url_for('register'))
+    return wrap
+
 # route to logout and return to login page
+
+
 @app.route('/logout')
+@is_logged_in
 def logout():
     session.clear()
     flash('You are now logged out', 'success')
     return redirect(url_for('login'))
 
+
 # route to the  start quiz page
 @app.route('/start_quiz')
+@is_logged_in
 def start_quiz():
     return render_template('start_quiz.html')
 
