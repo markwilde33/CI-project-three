@@ -1,48 +1,48 @@
 {% extends 'base.html' %}
-
 {% block content %}
-<div class="jumbotron style-one text-center">
-   <h1>Animal Riddle Game</h1>
-   <p class="lead pt-4">This application is a Code Institute project, built with Python & Flask</p>
-   <h2 class="text-center"><small>Welcome {{session.name}}</small></h2>
+<div class="container">
+   <div class=" container-fluid jumbotron style-one text-center">
+      <h1>Animal Riddle Game</h1>
+      <p class="lead pt-4">This application is a Code Institute project, built with Python & Flask</p>
+      <h2 class="text-center"><small>Welcome {{session.name}}</small></h2>
 
-   <button type="button" class="flash-button btn-lg" href="">Play Quiz</button>
-</div>
-<div class="container-fluid">
-   <div class="row">
-      <div class="col-sm-12  col-md-4 h-100">
-         <div class="thumbnail">
-            <img class="mb-4  img-fluid rounded" src="static/img/wolf.jpg" alt="Two wolves">
+      <button type="button" class="flash-button btn-lg" href="">Play Quiz</button>
+   </div>
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-sm-12  col-md-4 h-100">
+            <div class="thumbnail">
+               <img class="mb-4  img-fluid rounded" src="static/img/wolf.jpg" alt="Two wolves">
+            </div>
          </div>
-      </div>
-      <div class="card-riddle col-sm-12  col-md-4  h-100 mb-4 ">
-         <img class="card-img-top img-fluid w-100" src="static/img/yesplease.png" alt="riddle">
-         <div class="card-body-riddle riddle-card">
-            <p class="card-text-riddle">
-               <div>
-                  <ol>
-                     <li>
-                        <strong>Three attempts allowed per riddle</strong>
-                     </li>
+         <div class="card-riddle col-sm-12  col-md-4  h-100 mb-4 ">
+            <img class="card-img-top img-fluid w-100" src="static/img/yesplease.png" alt="riddle">
+            <div class="card-body-riddle riddle-card">
+               <p class="card-text-riddle">
+                  <div>
+                     <ol>
+                        <li>
+                           <strong>Three attempts allowed per riddle</strong>
+                        </li>
+                        <br>
+                        <li>
+                           <strong>Five points for each correct answer</strong>
+                        </li>
+                        <br>
+                        <li>
+                           <strong>Lose a point for each wrong answer</strong>
+                        </li>
+                     </ol>
                      <br>
-                     <li>
-                        <strong>Five points for each correct answer</strong>
-                     </li>
-                     <br>
-                     <li>
-                        <strong>Lose a point for each wrong answer</strong>
-                     </li>
-                  </ol>
-                  <br>
-               </div>
+                  </div>
+            </div>
          </div>
-      </div>
-      <div class="col-sm-12  col-md-4 h-100">
-         <div class="thumbnail">
-            <img class="mb-4 img-fluid rounded" src="static/img/parrotbig.jpg" alt="A parrot">
+         <div class="col-sm-12  col-md-4 h-100">
+            <div class="thumbnail">
+               <img class="mb-4 img-fluid rounded" src="static/img/parrotbig.jpg" alt="A parrot">
+            </div>
          </div>
       </div>
    </div>
 </div>
-
 {% endblock content %}
