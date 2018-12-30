@@ -8,6 +8,20 @@ body {
 }
 
 
+/*--------------------------------------------Miscellaneous styles*/
+h2 {
+   color: white;
+}
+
+.lead {
+   color: white;
+}
+
+.index-styles {
+   margin-top: 180px;
+
+}
+
 /*--------------------------------------------Images&Cards*/
 
 .thumbnail img {
@@ -43,20 +57,20 @@ body {
 /*--------------------------------------------Jumbotron styles*/
 
 .style-one {
-   margin-top: 80px;
+   margin-top: 20px;
    margin-bottom: 30px;
    color: #ffffff;
-   background-image: url("../../static/img/hia.png");
+   background-image: url("../../static/img/butterfly.jpg");
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
 }
 
 .style-two {
-   margin-top: 80px;
+   margin-top: 150px;
    margin-bottom: 30px;
    color: black;
-   background-image: url("../../static/img/landscape.jpeg");
+   background-image: url("../../static/img/hia.png");
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
@@ -67,9 +81,9 @@ body {
 /* Found at https://bytutorial.com/blogs/css3/how-to-create-a-flashing-button-using-css3 */
 
 .flash-button {
-   background: blue;
+   background: #dc143c;
    padding: 5px 10px;
-   color: #fff;
+   color: #ffff00;
    border: none;
    border-radius: 5px;
 
@@ -136,6 +150,13 @@ body {
 }
 
 
+.btn-lg {
+   padding: 10px 10px;
+   font-size: 20px;
+   border-radius: 10px;
+   width: 30%;
+}
+
 
 
 /*--------------------------------------------Login & Registration styles*/
@@ -143,27 +164,22 @@ body {
 
 .reg-log-img {
 
-   background-image: url("../../static/img/butterfly.jpg");
+   background-image: url("../../static/img/snowstar.jpg");
    background-size: cover;
    background-repeat: no-repeat;
-   /* background-position: center; */
-   /* display: block;
-   width: 100%; */
-   /* margin: 0%;
-   padding: 0%; */
+   background-position: center;
+
    height: 100%;
    font-family: 'Numans', sans-serif;
 }
 
 .container {
    height: 100%;
-   /* width: 100%; */
-   /* align-content: center; */
 }
 
 .card {
    padding: 5px 100px;
-   height: 275px;
+   height: 320px;
    margin-top: 180px;
    margin-bottom: auto;
    width: 400px;
@@ -207,5 +223,39 @@ input:focus {
 
 /*--------------------------------------------Formhelpers styles*/
 .help-inline {
+
    color: white !important;
+}
+
+
+
+
+/*--------------------------------------------Footer styles*/
+
+
+footer,
+footer a {
+   color: #fff;
+   text-decoration: none;
+   margin-bottom: 0px;
+   padding-bottom: 0px;
+}
+
+footer {
+   position: fixed;
+   margin: auto;
+   height: 100px;
+   width: 100%;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 1030;
+}
+
+/*--------------------------------------------Flash messages styles*/
+.alert {
+   position: relative;
+   padding: .75rem 1.25rem;
+   margin-bottom: 0px !important;
+   margin-top: 0px !important;
 }
