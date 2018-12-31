@@ -5,14 +5,13 @@ from wtforms import Form, StringField, PasswordField
 from wtforms.validators import DataRequired
 from functools import wraps
 
-
 app = Flask(__name__)
-# ///Set Database variables///
-USER_DATABASE = os.path.join(os.path.dirname(
+# Set the variable names for the path to the json files
+USERS = os.path.join(os.path.dirname(
     os.path.abspath(__file__)) + '/data/users.json')
-LEADERBOARD_DATABASE = os.path.join(os.path.dirname(
+LEADERBOARD = os.path.join(os.path.dirname(
     os.path.abspath(__file__)) + '/data/leaderboard.json')
-ANIMAL_RIDDLE_DATABASE = os.path.join(os.path.dirname(
+RIDDLES = os.path.join(os.path.dirname(
     os.path.abspath(__file__)) + '/data/animal_riddles.json')
 
 # Set quiz rules
@@ -20,50 +19,65 @@ MAX_ATTEMPT = 3
 CORRECT_SCORE = 5
 INCORRECT_SCORE = -1
 
-# ///Riddles list///
+# Riddles list
 animal_riddles = []
 
 
-# ///write to user and leaderboard databases///
 def initialize():
-    # ///write to the user and database///
-    if not os.path.exists(USER_DATABASE):
+    # write to users.json
+    if not os.path.exists(USERS):
         data = {'users': []}
-        with open(USER_DATABASE, 'w') as writer:
+        with open(USERS, 'w') as writer:
             json.dump(data, writer)
-    # ///write to the leaderboard database///
-    if not os.path.exists(LEADERBOARD_DATABASE):
+    # write to leaderboard.json
+    if not os.path.exists(LEADERBOARD):
         data = {'leaders': []}
-        with open(LEADERBOARD_DATABASE, 'w') as writer:
+        with open(LEADERBOARD, 'w') as writer:
             json.dump(data, writer)
-    # ///Read from the riddle database///
+    # Read from the animal_riddles.json
     global animal_riddles
-    with open(ANIMAL_RIDDLE_DATABASE) as reader:
+    with open(RIDDLES) as reader:
         animal_riddles = json.load(reader)
 
 
-# ///route to index page///
+def get_users():
+    # retrieve users from users.json
+    users = {}
+    with open(USERS) as reader:
+        users = json.load(reader)
+    return users
+
+
+def get_question():
+    # retrieve questions from animal_riddles.json
+    return 'Question ' + str(session['index'] + 1) + ': ' + animal_riddles[session['index']]['riddle']
+
+
+def get_answer():
+    # retrieve answers from animal_riddles.json
+    return 'Answer ' + str(session['index'] + 1) + ': ' + animal_riddles[session['index']]['answer']
+
+
+def get_image():
+     # retrieve images from animal_riddles.json
+    return animal_riddles[session['index']]['image_source']
+
+
 @app.route('/')
+# route to index page
 @app.route('/index')
 def index():
     return render_template('index.html')
 
 
-# retrieve users
-def get_users():
-    users = {}
-    with open(USER_DATABASE) as reader:
-        users = json.load(reader)
-    return users
-
-
 class RegisterForm(Form):
+    # Simple wtform for user registration
     name = StringField('Username', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
 
 
-# route to and logic for the registration page
 @app.route('/register', methods=['GET', 'POST'])
+# route to and logic for the registration page
 def register():
     form = RegisterForm(request.form)
     if request.method == 'POST' and form.validate():
@@ -73,7 +87,7 @@ def register():
         if not any(registered_user['username'].lower() == name.lower() for registered_user in registered_users['users']):
             registered_users['users'].append(
                 {'username': name, 'password': password})
-            with open(USER_DATABASE, 'w') as writer:
+            with open(USERS, 'w') as writer:
                 json.dump(registered_users, writer)
             flash(
                 'Registration successful. Please log in.', 'success')
@@ -84,8 +98,8 @@ def register():
     return render_template('register.html', form=form)
 
 
-# route to and logic for the login page
 @app.route('/login', methods=['GET', 'POST'])
+# route to and logic for the login page
 def login():
     if request.method == 'POST':
         post_username = request.form['username']
@@ -112,9 +126,8 @@ def login():
     return render_template('login.html')
 
 
-# wrapper function to ensure the user is logged in before having access to the quiz
-# Found at https://pythonprogramming.net/decorator-wrappers-flask-tutorial-login-required/
 def is_logged_in(f):
+    # wrapper function to ensure the user is logged in before having access to the quiz, found at: https://pythonprogramming.net/decorator-wrappers-flask-tutorial-login-required/
     @wraps(f)
     def wrap(*args, **kwargs):
         if 'logged_in' in session:
@@ -125,10 +138,9 @@ def is_logged_in(f):
             return redirect(url_for('register'))
     return wrap
 
-# route to logout and return to login page
-
 
 @app.route('/logout')
+# route to logout and return to login page
 @is_logged_in
 def logout():
     session.clear()
@@ -136,16 +148,15 @@ def logout():
     return redirect(url_for('login'))
 
 
-# route to the  start quiz page
 @app.route('/start_quiz')
+# route to the  start quiz page
 @is_logged_in
 def start_quiz():
     return render_template('start_quiz.html')
 
-# route to play the quiz
-
 
 @app.route('/play_quiz', methods=['GET'])
+# route to play the quiz
 @is_logged_in
 def play_quiz():
     return render_template('play_quiz.html')
