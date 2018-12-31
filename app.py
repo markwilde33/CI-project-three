@@ -159,8 +159,32 @@ def start_quiz():
 # route to play the quiz
 @is_logged_in
 def play_quiz():
-    return render_template('play_quiz.html')
+    return render_template('play_quiz.html', question = get_question())
 
+
+@app.route('/riddle', methods=['POST'])
+# Route to loop through the riddles and quiz scoring logic
+@is_logged_in
+def riddle():
+    if request.method == 'POST':
+        answer = request.form['answer']
+        correct_answer = None
+        if animal_riddles[session['index']]['answer'].lower() == answer.lower():
+            if session['index'] != len(animal_riddles) - 1:
+                flash('Well done! Try another one.', 'success')
+            session['score'] += CORRECT_SCORE
+            correct_answer = True
+        elif session['attempt'] == 1:
+            session['score'] += INCORRECT_SCORE
+            if session['index'] != len(animal_riddles) - 1:
+                flash('Hard luck!. Try the next riddle.', 'danger')
+                session['index'] += 1
+                session['attempt'] = MAX_ATTEMPT
+        else:
+            session['attempt'] -= 1
+            session['score'] += INCORRECT_SCORE
+            flash('"' + answer + '" is an incorrect answer. '+ str(session['attempt']) +' attempts remaining', 'warning')
+        return render_template('play_quiz.html', question = get_question(), correct_answer = correct_answer, answer = get_answer(), image = get_image())
 
 if __name__ == '__main__':
     initialize()
