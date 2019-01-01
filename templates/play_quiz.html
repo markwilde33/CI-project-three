@@ -3,8 +3,8 @@
 <div class="container riddle-styles">
    {% from "includes/_formhelpers.html" import render_field %}
    {% if correct_answer %}
-   <div class="form-group">
-      <img src="{{ image }}" class="" alt="{{ answer }}" />
+   <div class="form-group img-circle">
+      <img src="{{ image }}" class="img-riddles" alt="{{ answer }}" />
    </div>
    {% else %}
    <form method="POST" action="/riddle">

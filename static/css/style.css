@@ -25,7 +25,7 @@ h2 {
 /*--------------------------------------------Images&Cards*/
 
 .thumbnail img {
-   height: 400px;
+   height: 392px;
    width: 100%;
    box-shadow: 3px 4px 7.4px 0.6px rgba(0, 0, 0, 0.2);
 }
@@ -92,13 +92,13 @@ h2 {
    animation-timing-function: linear;
    animation-iteration-count: infinite;
 
-   //Firefox 1+
+   /* //Firefox 1+ */
    -webkit-animation-name: flash;
    -webkit-animation-duration: 1s;
    -webkit-animation-timing-function: linear;
    -webkit-animation-iteration-count: infinite;
 
-   //Safari 3-4
+   /* //Safari 3-4 */
    -moz-animation-name: flash;
    -moz-animation-duration: 1s;
    -moz-animation-timing-function: linear;
@@ -119,7 +119,7 @@ h2 {
    }
 }
 
-//Firefox 1+
+/* //Firefox 1+ */
 @-webkit-keyframes flash {
    0% {
       opacity: 1.0;
@@ -134,7 +134,7 @@ h2 {
    }
 }
 
-//Safari 3-4
+/* //Safari 3-4 */
 @-moz-keyframes flash {
    0% {
       opacity: 1.0;
@@ -234,11 +234,18 @@ input:focus {
 
 
 footer,
-footer a {
+footer {
    color: #fff;
    text-decoration: none;
    margin-bottom: 0px;
    padding-bottom: 0px;
+}
+
+div>a {
+   color: #b0c4de;
+   font-weight: 500;
+
+
 }
 
 footer {
@@ -252,10 +259,28 @@ footer {
    z-index: 1030;
 }
 
+/*--------------------------------------------Image styles*/
+.img-riddles {
+
+   width: 360px;
+   height: 290px;
+   border-radius: 1.5rem !important;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+
+}
+
+/*--------------------------------------------Riddle page styles*/
+.riddle-styles {
+   margin-top: 6rem;
+}
+
 /*--------------------------------------------Flash messages styles*/
 .alert {
    position: relative;
    padding: .75rem 1.25rem;
    margin-bottom: 0px !important;
    margin-top: 0px !important;
+   /* margin-top: 1rem !important;*/
 }
