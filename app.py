@@ -50,7 +50,7 @@ def get_users():
 
 def get_question():
     # retrieve questions from animal_riddles.json
-    return 'Question ' + str(session['index'] + 1) + ': ' + animal_riddles[session['index']]['riddle']
+    return 'Question ' + str(session['index'] + 1) + ':  ' + animal_riddles[session['index']]['riddle']
 
 
 def get_answer():
@@ -169,6 +169,7 @@ def riddle():
     if request.method == 'POST':
         answer = request.form['answer']
         correct_answer = None
+        last_question = None
         if animal_riddles[session['index']]['answer'].lower() == answer.lower():
             if session['index'] != len(animal_riddles) - 1:
                 flash('Well done! Try another one.', 'success')
@@ -184,7 +185,25 @@ def riddle():
             session['attempt'] -= 1
             session['score'] += INCORRECT_SCORE
             flash('"' + answer + '" is an incorrect answer. '+ str(session['attempt']) +' attempts remaining', 'warning')
-        return render_template('play_quiz.html', question = get_question(), correct_answer = correct_answer, answer = get_answer(), image = get_image())
+        if session['index'] == len(animal_riddles) - 1:
+            last_question = True
+        return render_template('play_quiz.html', question = get_question(), correct_answer = correct_answer, answer = get_answer(), image = get_image(), last_question = last_question)
+
+
+# Route to show next question or user score on completion of riddle quiz
+@app.route('/next_question', methods=['POST'])
+@is_logged_in
+def next_question(show_end_message = False):
+    if request.method == 'POST':
+        session['index'] += 1
+        session['attempt'] = MAX_ATTEMPT
+        if session['index'] == len(animal_riddles):
+            flash('You have completed the Quiz. Your score is ' + str(session['score']), 'success')
+            session['index'] = 0
+            session['score'] = 0
+            return render_template('start_quiz.html')
+        else:
+            return render_template('play_quiz.html', question = get_question())
 
 if __name__ == '__main__':
     initialize()
