@@ -3,9 +3,24 @@
 <div class="container riddle-styles">
    {% from "includes/_formhelpers.html" import render_field %}
    {% if correct_answer %}
-   <div class="form-group img-circle">
-      <img src="{{ image }}" class="img-riddles" alt="{{ answer }}" />
-   </div>
+   <form method="POST" action="/next_question">
+      <div class="form-group">
+         <label for="question">{{ question }}</label>
+      </div>
+      <div class="form-group">
+         <label for="answer">{{ answer }}</label>
+      </div>
+      <div class="form-group img-circle">
+         <img src="{{ image }}" class="img-riddles" alt="{{ answer }}" />
+      </div>
+      <div class="text-center">
+         {% if last_question %}
+         <input class="btn btn-success" type="submit" name="finish" value="Finish">
+         {% else %}
+         <input class="btn btn-primary" type="submit" name="next" value="Next Question">
+         {% endif %}
+      </div>
+   </form>
    {% else %}
    <form method="POST" action="/riddle">
       <div class="form-group">
