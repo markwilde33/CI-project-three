@@ -6,16 +6,18 @@
       <p class="lead pt-4"><strong>This application is a Code Institute project, built with Python & Flask</strong></p>
       <h2 class="text-center text-white">Welcome {{session.name}}</h2>
       <br>
-      <a class="btn flash-button btn-success btn-lg" flash-button" href="{{ url_for('play_quiz') }}">Play Quiz</a>
+      <a class="btn flash-button btn-success btn-lg button-style" flash-button" href="{{ url_for('play_quiz') }}">Play
+         Quiz</a>
    </div>
    <div class="container-fluid mb-5">
       <div class="row">
-         <div class="col-sm-12  col-md-4 h-100">
+         <div class="d-none d-md-block col-md-4 h-100">
             <div class="thumbnail">
                <img class="mb-4  img-fluid rounded" src="static/img/wolf.jpg" alt="Two wolves">
             </div>
          </div>
-         <div class="card-riddle col-sm-12  col-md-4  h-100 mb-4 ">
+         <div class="card-riddle col-sm-12  col-md-4  h-100 mb-4 order-sm-
+         first ">
             <img class="card-img-top img-fluid w-100" src="static/img/yesplease.png" alt="riddle">
             <div class="card-body-riddle riddle-card">
                <p class="card-text-riddle">

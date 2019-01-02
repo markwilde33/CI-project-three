@@ -4,33 +4,53 @@
    {% from "includes/_formhelpers.html" import render_field %}
    {% if correct_answer %}
    <form method="POST" action="/next_question">
+
       <div class="form-group">
-         <label for="question">{{ question }}</label>
+         <!-- <label for="question">
+            <h5><strong>{{ question }}</strong></h5>
+         </label> -->
       </div>
       <div class="form-group">
-         <label for="answer">{{ answer }}</label>
+         <label for="answer">
+            <h3><strong>{{ answer }}</strong></h3>
+         </label>
+      </div>
+
+      <div class="form-group text-center">
+         <label for="links"><strong>Find out more about this animal <a href="{{ links }}" target="blank">here</a></strong></label>
       </div>
       <div class="form-group img-circle">
          <img src="{{ image }}" class="img-riddles" alt="{{ answer }}" />
       </div>
       <div class="text-center">
          {% if last_question %}
-         <input class="btn btn-success" type="submit" name="finish" value="Finish">
+         <input class="btn btn-success btn-lg" type="submit" name="finish" value="Finish">
          {% else %}
-         <input class="btn btn-primary" type="submit" name="next" value="Next Question">
+         <input class="btn btn-primary btn-lg" type="submit" name="next" value="Next Question">
          {% endif %}
       </div>
+
    </form>
    {% else %}
-   <form method="POST" action="/riddle">
-      <div class="form-group">
-         <label for="question">{{ question }}</label>
+   <form method="POST" action="/riddle" class="mt-5">
+      <div class="wrapper question_styles">
+         <div class="form-group">
+            <label for="question">
+               <h4><strong>{{ question }}</strong></h4>
+            </label>
+         </div>
+         <div class="form-group">
+            <label for="answer">
+               <p>
+                  <h4><strong>Answer:</strong></h4>
+               </p>
+            </label>
+            <p> <input type="text" name="answer" class="form-control text-center"></p>
+            <p> <input class="btn btn-primary btn-lg" type="submit" value="Check"></p>
+         </div>
+
       </div>
-      <div class="form-group">
-         <label for="answer">Answer</label>
-         <input type="text" name="answer" class="form-control">
-      </div>
-      <input class="btn btn-primary" type="submit" value="Check">
+
    </form>
 </div>
 {% endif %}
