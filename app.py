@@ -55,7 +55,7 @@ def get_question():
 
 def get_answer():
     # retrieve answers from animal_riddles.json
-    return 'Answer ' + str(session['index'] + 1) + ': ' + animal_riddles[session['index']]['answer']
+    return 'Answer ' + ': ' + animal_riddles[session['index']]['answer']
 
 
 def get_image():
@@ -63,11 +63,17 @@ def get_image():
     return animal_riddles[session['index']]['image_source']
 
 
+def get_links():
+    # retrieve animal info links from animal_riddles.json
+    return animal_riddles[session['index']]['links']
+
+
 @app.route('/')
 # route to index page
 @app.route('/index')
 def index():
     return render_template('index.html')
+
 
 
 class RegisterForm(Form):
@@ -172,7 +178,7 @@ def riddle():
         last_question = None
         if animal_riddles[session['index']]['answer'].lower() == answer.lower():
             if session['index'] != len(animal_riddles) - 1:
-                flash('Well done! Try another one.', 'success')
+                flash('Well done! That is correct.', 'success')
             session['score'] += CORRECT_SCORE
             correct_answer = True
         elif session['attempt'] == 1:
@@ -187,11 +193,12 @@ def riddle():
             flash('"' + answer + '" is an incorrect answer. '+ str(session['attempt']) +' attempts remaining', 'warning')
         if session['index'] == len(animal_riddles) - 1:
             last_question = True
-        return render_template('play_quiz.html', question = get_question(), correct_answer = correct_answer, answer = get_answer(), image = get_image(), last_question = last_question)
+        return render_template('play_quiz.html', question = get_question(), correct_answer = correct_answer, answer = get_answer(), image = get_image(), last_question = last_question, links = get_links())
 
 
-# Route to show next question or user score on completion of riddle quiz
+
 @app.route('/next_question', methods=['POST'])
+# Route to next question and logic for displaying the next question 
 @is_logged_in
 def next_question(show_end_message = False):
     if request.method == 'POST':
