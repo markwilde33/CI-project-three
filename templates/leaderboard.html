@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Riddle Leaders !</h3>
+<table class="table table-striped">
+   <tr>
+      <th>Rank</th>
+      <th>Username</th>
+      <th>Score</th>
+   </tr>
+   {% for leader in leaders %}
+   <tr>
+      <td>{{ loop.index }}</td>
+      <td>{{leader['username']}}</td>
+      <td>{{leader['score']}}</td>
+      {% endfor %}
+</table>
+{% endblock content %}
