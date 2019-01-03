@@ -2,5 +2,44 @@
    "users": [{
       "username": "john",
       "password": "password"
+   }, {
+      "username": "mary",
+      "password": "mary"
+   }, {
+      "username": "moomoo",
+      "password": "password"
+   }, {
+      "username": "jess",
+      "password": "jess"
+   }, {
+      "username": "dave",
+      "password": "dave"
+   }, {
+      "username": "mki",
+      "password": "nvjhk"
+   }, {
+      "username": "johnoo",
+      "password": "pass"
+   }, {
+      "username": "coo",
+      "password": "coo"
+   }, {
+      "username": "sparks",
+      "password": "sparks"
+   }, {
+      "username": "s",
+      "password": "s"
+   }, {
+      "username": "pp",
+      "password": "pp"
+   }, {
+      "username": "x",
+      "password": "x"
+   }, {
+      "username": "jamie",
+      "password": "jaime"
+   }, {
+      "username": "philbert",
+      "password": "philbert"
    }]
 }
