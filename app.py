@@ -76,6 +76,7 @@ def get_leaders():
     return leaders
 
 
+
 def update_leaderboard():
 # update the leaderboard when user completes the quiz
     existing_leaders = get_leaders()
@@ -201,7 +202,9 @@ def riddle():
             if session['index'] != len(animal_riddles) - 1:
                 flash('Hard luck!. Try the next riddle.', 'danger')
                 session['index'] += 1
-                session['attempt'] = MAX_ATTEMPT  
+                session['attempt'] = MAX_ATTEMPT
+            else:
+                return next_question()    
         else:
             session['attempt'] -= 1
             session['score'] += INCORRECT_SCORE
@@ -214,11 +217,12 @@ def riddle():
 @app.route('/next_question', methods=['POST'])
 # Route to next question and logic for displaying the next question 
 @is_logged_in
-def next_question(show_end_message = False):
+def next_question():
     if request.method == 'POST':
         session['index'] += 1
         session['attempt'] = MAX_ATTEMPT
         if session['index'] == len(animal_riddles):
+            update_leaderboard()
             flash('You have completed the Quiz. Your score is ' + str(session['score']), 'success')
             session['index'] = 0
             session['score'] = 0
@@ -226,6 +230,14 @@ def next_question(show_end_message = False):
         else:
             return render_template('play_quiz.html', question = get_question())
 
+
+@app.route('/leaderboard', methods=['GET'])
+# Route to and logic for riddle leaderboard. Show top ten user scores.
+@is_logged_in
+def leaderboard():
+    existing_leaders = get_leaders()['leaders']
+    sorted_leaders = sorted(existing_leaders, key = lambda i : (i['score']), reverse=True)
+    return render_template('leaderboard.html', leaders = sorted_leaders[:10])
 
 if __name__ == '__main__':
     initialize()
