@@ -68,6 +68,21 @@ def get_links():
     return animal_riddles[session['index']]['links']
 
 
+def get_leaders():
+     # retrieve leaders from leaderboard.json
+    leaders = {}
+    with open(LEADERBOARD) as reader:
+        leaders = json.load(reader)
+    return leaders
+
+
+def update_leaderboard():
+# update the leaderboard when user completes the quiz
+    existing_leaders = get_leaders()
+    existing_leaders['leaders'].append({'username':session['name'], 'score':session['score']})
+    with open(LEADERBOARD, 'w') as writer:
+        json.dump(existing_leaders, writer)
+
 @app.route('/')
 # route to index page
 @app.route('/index')
@@ -186,7 +201,7 @@ def riddle():
             if session['index'] != len(animal_riddles) - 1:
                 flash('Hard luck!. Try the next riddle.', 'danger')
                 session['index'] += 1
-                session['attempt'] = MAX_ATTEMPT
+                session['attempt'] = MAX_ATTEMPT  
         else:
             session['attempt'] -= 1
             session['score'] += INCORRECT_SCORE
@@ -194,7 +209,6 @@ def riddle():
         if session['index'] == len(animal_riddles) - 1:
             last_question = True
         return render_template('play_quiz.html', question = get_question(), correct_answer = correct_answer, answer = get_answer(), image = get_image(), last_question = last_question, links = get_links())
-
 
 
 @app.route('/next_question', methods=['POST'])
@@ -211,6 +225,7 @@ def next_question(show_end_message = False):
             return render_template('start_quiz.html')
         else:
             return render_template('play_quiz.html', question = get_question())
+
 
 if __name__ == '__main__':
     initialize()
