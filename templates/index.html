@@ -1,14 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container index-styles">
-   <div class="jumbotron style-two text-center mt-4">
+   <div class="jumbotron style-two text-center">
       <h2>Welcome To My Flask Riddle Game</h2>
       <br>
       {% if session.logged_in == NULL %}
-      <p class="lead">Please register and login to play</p>
+      <p class="lead text-center">Please register and login to play</p>
       <br>
-      <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg">Register</a>
-      <a href="{{ url_for('login') }}" class="btn btn-success btn-lg">Login</a>
+      <div class="">
+         <a href="{{ url_for('register') }}" class="btn btn-warning btn-lg">Register</a>
+
+         <a href="{{ url_for('login') }}" class="btn btn-success btn-lg ml-3">Login</a>
+      </div>
       {% endif %}
    </div>
 </div>

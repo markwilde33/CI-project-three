@@ -22,6 +22,34 @@ h2 {
 
 }
 
+/* media query needed width 20% for large screen width 40% for small screens */
+.answer-box-style {
+   width: 30%;
+   /* text-align: center; */
+   display: inline-block;
+}
+
+.form-group {
+   text-align: center;
+}
+
+.question_styles {
+   margin-top: 10rem;
+   text-align: center;
+}
+
+.btn-lg {
+   padding: 6px 12px;
+   font-size: 20px;
+   border-radius: 10px;
+}
+
+.btn-primary {
+   color: #fff;
+   background-color: #20b2aa;
+   border-color: #20b2aa;
+}
+
 /*--------------------------------------------Images&Cards*/
 
 .thumbnail img {
@@ -150,12 +178,14 @@ h2 {
 }
 
 
-.btn-lg {
+.button-style {
    padding: 10px 10px;
    font-size: 20px;
    border-radius: 10px;
    width: 30%;
 }
+
+
 
 
 
@@ -253,6 +283,7 @@ footer {
    margin: auto;
    height: 100px;
    width: 100%;
+   margin-top: 0px;
    right: 0;
    bottom: 0;
    left: 0;
@@ -273,8 +304,11 @@ footer {
 
 /*--------------------------------------------Riddle page styles*/
 .riddle-styles {
-   margin-top: 6rem;
+   /* margin-top: 1rem; */
+   margin-top: 2rem;
 }
+
+
 
 /*--------------------------------------------Flash messages styles*/
 .alert {
