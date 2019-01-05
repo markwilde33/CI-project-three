@@ -1,9 +1,1 @@
-{
-   "leaders": [{
-         "username": "philly",
-         "score": 17
-      }, {
-         "username": "john",
-         "score": 42
-      },
-   }
+{"leaders": [{"username": "philly", "score": 17}, {"username": "mary", "score": 26}, {"username": "john", "score": 33}, {"username": "coo", "score": 30}]}
