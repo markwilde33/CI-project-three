@@ -1,17 +1,29 @@
 {% extends 'base.html' %}
 {% block content %}
-<h3>Riddle Leaders !</h3>
-<table class="table table-striped">
-   <tr>
-      <th>Rank</th>
-      <th>Username</th>
-      <th>Score</th>
-   </tr>
-   {% for leader in leaders %}
-   <tr>
-      <td>{{ loop.index }}</td>
-      <td>{{leader['username']}}</td>
-      <td>{{leader['score']}}</td>
-      {% endfor %}
-</table>
+<div class="wrapper score-log-img ">
+   <div class="container-fluid  leaderboard-styles">
+      <table class="table table-striped table-dark">
+         <thead class="thead-dark">
+            <tr>
+               <th>
+                  <h4><strong>Rank</strong></h4>
+               </th>
+               <th>
+                  <h4><strong>Player</strong></h4>
+               </th>
+               <th>
+                  <h4><strong>Score</strong></h4>
+               </th>
+            </tr>
+         </thead>
+         {% for leader in leaders %}
+         <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{leader['username']}}</td>
+            <td>{{leader['score']}}</td>
+            {% endfor %}
+         </tr>
+      </table>
+   </div>
+</div>
 {% endblock content %}
