@@ -8,7 +8,7 @@ body {
 }
 
 
-/*--------------------------------------------Miscellaneous styles*/
+/*--------------------------------------------Miscellaneous Styles*/
 h2 {
    color: white;
 }
@@ -22,11 +22,18 @@ h2 {
 
 }
 
-/* media query needed width 20% for large screen width 40% for small screens */
+
 .answer-box-style {
    width: 30%;
-   /* text-align: center; */
    display: inline-block;
+}
+
+
+@media(max-width:600px) {
+   .answer-box-style {
+      width: 50%;
+
+   }
 }
 
 .form-group {
@@ -50,7 +57,7 @@ h2 {
    border-color: #20b2aa;
 }
 
-/*--------------------------------------------Images&Cards*/
+/*--------------------------------------------Images & Card Styles*/
 
 .thumbnail img {
    height: 392px;
@@ -82,7 +89,7 @@ h2 {
    background-color: black;
 }
 
-/*--------------------------------------------Jumbotron styles*/
+/*--------------------------------------------Jumbotron Styles*/
 
 .style-one {
    margin-top: 20px;
@@ -105,7 +112,7 @@ h2 {
 }
 
 
-/*--------------------------------------------Flash button styles*/
+/*--------------------------------------------Flash Button Styles*/
 /* Found at https://bytutorial.com/blogs/css3/how-to-create-a-flashing-button-using-css3 */
 
 .flash-button {
@@ -178,7 +185,7 @@ h2 {
 }
 
 
-.button-style {
+.button-styles {
    padding: 10px 10px;
    font-size: 20px;
    border-radius: 10px;
@@ -186,10 +193,18 @@ h2 {
 }
 
 
+@media(max-width:900px) {
+   .button-styles {
+      padding: 10px 10px;
+      font-size: 20px;
+      border-radius: 10px;
+      width: 40%;
 
 
+   }
+}
 
-/*--------------------------------------------Login & Registration styles*/
+/*--------------------------------------------Login & Registration Styles*/
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 .reg-log-img {
@@ -198,9 +213,8 @@ h2 {
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
-
    height: 100%;
-   font-family: 'Numans', sans-serif;
+
 }
 
 .container {
@@ -251,16 +265,15 @@ input:focus {
    background-color: white;
 }
 
-/*--------------------------------------------Formhelpers styles*/
+/*--------------------------------------------Formhelpers Styles*/
 .help-inline {
-
    color: white !important;
 }
 
 
 
 
-/*--------------------------------------------Footer styles*/
+/*--------------------------------------------Footer Styles*/
 
 
 footer,
@@ -290,7 +303,7 @@ footer {
    z-index: 1030;
 }
 
-/*--------------------------------------------Image styles*/
+/*--------------------------------------------Image Styles*/
 .img-riddles {
 
    width: 360px;
@@ -302,15 +315,63 @@ footer {
 
 }
 
-/*--------------------------------------------Riddle page styles*/
+/*--------------------------------------------Riddle Page Styles*/
 .riddle-styles {
-   /* margin-top: 1rem; */
    margin-top: 2rem;
 }
 
+/*--------------------------------------------LeaderBoard Page Styles*/
 
 
-/*--------------------------------------------Flash messages styles*/
+.leaderboard-styles {
+   width: 90%;
+   padding-top: 100px;
+   padding-left: 33px;
+   padding-right: 33px;
+   margin-right: auto;
+   margin-left: auto;
+
+}
+
+@media(max-width:568px) {
+   .leaderboard-styles {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+
+
+   }
+}
+
+table {
+   border: thick solid #b0c4de;
+   border-style: double;
+   opacity: 0.8;
+}
+
+.table .thead-dark th {
+   color: #fff;
+   background-color: #1816CA;
+   border-color: #b0c4de;
+   text-align: center;
+}
+
+tr {
+   text-align: center;
+}
+
+.score-log-img {
+
+   background-image: url("../../static/img/fog-forest.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   height: 100%;
+
+}
+
+
+/*--------------------------------------------Flashes Messages Styles*/
 .alert {
    position: relative;
    padding: .75rem 1.25rem;
