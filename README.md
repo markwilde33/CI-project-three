@@ -144,19 +144,19 @@ Several user stories were considered before development began:
 
 1. "As an animal lover I want to play a simple but engaging quiz game to test my knowledge."
  
-2. ""As an animal lover I want to see pictures of the animals used in the quiz and have an option to read more about each animal."
+2. "As an animal lover I want to see pictures of the animals used in the quiz and have an option to read more about each animal."
 
-3."I want to be able to register a username and sign in. I can then play multiple games and try to beat my previous scores."
+3. "I want to be able to register a username and sign in. I can then play multiple games and try to beat my previous scores."
 
 4. "I want to be welcomed to the quiz by my unique username and have the rules presented to me before I play the game."
 
 5. "On completion of the quiz I want to see my score and visit a leaderboard. Did I make the top ten? If so, were did I rank?"
 
-5. "I want to play the quiz at the same time as my friends, each on our own browsers, and see who does the best."
+6. "I want to play the quiz at the same time as my friends, each on our own browsers, and see who does the best."
 
-6."I want to be informed how of many guesses I have left when I get a question wrong."
+7. "I want to be informed how of many guesses I have left when I get a question wrong."
 
-7. "I want to be able to logout at any stage, even if I am in the middle of a game."
+8. "I want to be able to logout at any stage, even if I am in the middle of a game."
 
 
 
@@ -224,7 +224,9 @@ Several user stories were considered before development began:
 - [Flask](http://flask.pocoo.org/)
     - The project uses the **Flask** micro web framework as per instructions.
   
+
 ###Version Control
+
 
 - The project uses [Git](https://git-scm.com) as it's version control system.
   
@@ -260,9 +262,11 @@ If this section grows too long, you may want to split it off into a separate fil
 
 The website has been deployed to [Heroku](https://www.heroku.com/) and can be accessed [here](https://flask-riddle.herokuapp.com/)
 
+
 **Heroku Deployment**
 
-1.Create an [Heroku](https://www.heroku.com/) account.
+
+1. Create an [Heroku](https://www.heroku.com/) account.
 
 2. Create a new app 'flask-riddle' on heroku.com
 
