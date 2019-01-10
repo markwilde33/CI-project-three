@@ -9,6 +9,7 @@
 -------
 
 
+
 ## Index
 
 
@@ -26,10 +27,12 @@
 9. [Credits](#credits)
 
 
+
 ## Instructions From Code Institute
 
 
 Guidelines for project development:
+
 
 - The project's logic must be written in Python, HTML and CSS. Use flask, a micro-framework, to structure your project's back-end. 
 - Build a web application game that asks players to guess the answer to a pictorial or text-based riddle.
@@ -44,7 +47,9 @@ Guidelines for project development:
 - Deploy the final version of your code to a hosting platform such as Heroku.
 
 
+
 ## Riddle Information
+
 
 - Players are requested to register and login to play the game. They can then read the rules or began a game immediately.
 - The game consists of 10 animal riddles.
@@ -57,6 +62,7 @@ Guidelines for project development:
 - When players give an incorrect answer they receive a warning message which also displays how many attempts they have left.
 - When a player gives 3 incorrect answers they receive a warning message and are taken to the next riddle.
 - On completion of the riddle players receive a message with their final score. They are then directed to the leaderboard page which displays the top ten riddle scores.
+
 
 
 ## UX
@@ -106,11 +112,13 @@ Guidelines for project development:
 <details>
   <summary><strong><em>Leaderboard page</em></strong></summary>
   
-  ![alt="Leaderboard page mockup"](mockups/Leaderboard_page.png)
+  ![alt="Leaderboard page mockup"](mockups/leaderboard_page.png)
 </details> 
 
 
+
 ### Design
+
 
 - Development of the website adhered to a mobile first approach. The site consists of six pages. It uses a simplistic design with minimal content so users can focus on the riddle game. 
   
@@ -127,9 +135,12 @@ Guidelines for project development:
 - links to external sites with additional information were included, for those users who like to have easy access to further information.
 
 
+
 ### User Stories
 
+
 Several user stories were considered before development began:
+
 
 1. "As an animal lover I want to play a simple but engaging quiz game to test my knowledge."
  
@@ -148,7 +159,9 @@ Several user stories were considered before development began:
 7. "I want to be able to logout at any stage, even if I am in the middle of a game."
 
 
+
 ## Features
+
 
 | Page        |                                                                                                                                                                                                                                                                           Description                                                                                                                                                                                                                                                                           |
 | :---------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -160,18 +173,28 @@ Several user stories were considered before development began:
 | Leaderboard |                                                                                                                                                                                                                          This page provides a leaderboard table with the top ten user scores. It displays rank player name and score.                                                                                                                                                                                                                           |
 
 
+
 ## Existing/Future Technologies
 
+
 - Another riddle which unlocks when users get a score of 40 points or more. This riddle would have a further 10 questions about animals and it's own leaderboard.
+  
 - A page hosting a photo collection and interesting information about each riddle animal.
+
 
 
 ## Technologies Used
 
+
+### Virtual Environment
+
+
 - [Pipenv](https://pipenv.readthedocs.io/en/latest/)
     - The project uses **Pipenv** to set a virtual environment.
 
-**Front end**
+
+### Front end
+
 
 - [HTML](https://www.w3schools.com/html/default.asp)
     - The project uses **HTML** to create the pages.
@@ -191,7 +214,9 @@ Several user stories were considered before development began:
 - [JSON](https://www.json.org/)
     - The project uses **JSON** to organize data in files.
   
-**Back end**
+
+### Back end
+
 
 - [Python](https://www.python.org/)
     - The project uses **Python** as per instructions.
@@ -206,7 +231,9 @@ Several user stories were considered before development began:
 - The project uses  a  [Github](https://github.com) repository.
 
    
+
 ## Testing
+
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
@@ -227,7 +254,9 @@ You should also mention in this section any interesting bugs or problems you dis
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 
+
 ## Deployment
+
 
 The website has been deployed to [Heroku](https://www.heroku.com/) and can be accessed [here](https://flask-riddle.herokuapp.com/)
 
@@ -237,50 +266,56 @@ The website has been deployed to [Heroku](https://www.heroku.com/) and can be ac
 
 2. Create a new app 'flask-riddle' on heroku.com
 
-3. Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
-    - $ brew install heroku/brew/heroku
-
-4. Login to heroku
-    - $ heroku login
-
-5. Check app has been created by heroku
-    - $ heroku apps
-
-6. Add heroku remote
-    - $ heroku git:remote -a flask-riddle
-
-7. Add requirements.txt file (allows heroku to access the projects build pack, not needed when using a Pipenv virtual environment, has been included for reasons of best practice)
-
-   -To create a requirements. txt file, enter following commands:
-
-    - $ sudo pip3 freeze --local > requirements.txt
-    - $ git add requirements.txt
-    - $ git commit -m " Added a requirements.txt"
-    - $ git push heroku master
+3. Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli):
+    ``` 
+    $ brew install heroku/brew/heroku
+    ``` 
+4. Login to heroku:
+    ``` 
+    $ heroku login
+    ``` 
+5. Check app has been created by heroku:
+    ``` 
+    $ heroku apps
+    ``` 
+6. Add heroku remote:
+    ``` 
+    $ heroku git:remote -a flask-riddle
+    ``` 
+7. Add requirements.txt file (allows heroku to access the projects build pack, not needed when using a Pipenv virtual environment, has been included for reasons of best practice):
+    ``` 
+    $ sudo pip3 freeze --local > requirements.txt
+    $ git add requirements.txt
+    $ git commit -m " Added a requirements.txt"
+    $ git push heroku master
+    ``` 
       
-8. Add Procfile (Instructs heroku how start running the project)
-   
-    - $ echo web: python app.py > Procfile
-    - $ git add Procfile
-    - $ git commit -m 'Added Procfile'
-    - $ git push heroku master
-
-9.  Set up dynos
-    - $ heroku ps:scale web=1
-
-10. Setup config variables on heroku dashboard
+8.  Add Procfile (Instructs heroku how start running the project):
+    ``` 
+    $ echo web: python app.py > Procfile
+    $ git add Procfile
+    $ git commit -m 'Added Procfile'
+    $ git push heroku master
+    ``` 
+9.  Set up dynos:
+    ``` 
+    $ heroku ps:scale web=1
+    ``` 
+1.  Setup config variables on heroku dashboard:
     - go to settings and click on reveal config vars
     -  Set IP to 0.0.0.0
     -  Set PORT to 5000
 
-11. Restart dynos
+2.  Restart dynos:
     - Navigate into the 'More' menu and select 'Restart all dynos' to update the apps settings.
 
-12. Open app
+3.  Open app:
     -Click on the Open 'app' button to view your heroku deployed app in the browser.
 
 
+
 ## Installation
+
 
 ``` 
 from the console type:
@@ -294,17 +329,22 @@ $ python3 app.py
 App available at http://127.0.0.1:5000/
 
 
+
 ## Credits
+
 
 [Code Institute](https://codeinstitute.net/)
 
 The Html Fundamentals module, Css Fundamentals module, Python Fundamentals module,Practical Python module and the Data Centric Development module were used for guidance.
 
 
+
 ### Content
+
 
 - [wikipedia](https://en.wikipedia.org/wiki/Animal) was used for animal information.
 - [Youtube](https://www.youtube.com/watch?v=c0IRci0nz14) was used for animal riddles.
+
 
 
 ### Media
