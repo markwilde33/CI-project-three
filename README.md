@@ -165,10 +165,10 @@ Several user stories were considered before development began:
 
 | Page        |                                                                                                                                                                                                                                                                           Description                                                                                                                                                                                                                                                                           |
 | :---------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| Index       |                                                                                                                                                                                                                             This the the landing page. It is a basic page with a banner image,a register button and a login button.                                                                                                                                                                                                                             |
+| Index       |                                                                                                                                                                                                                            This the the landing page. It is a basic page with a banner image, a register button and a login button.                                                                                                                                                                                                                             |
 | Register    |                                                                                                                                                                                                                                        This page has a basic form for new users to register. It has a background image.                                                                                                                                                                                                                                         |
 | Login       |                                                                                                                                                                                                                                            This page has a basic form for users to login. It has a background image.                                                                                                                                                                                                                                            |
-| Start Quiz  |                                                                                                                                              This page has a banner image with a welcome message.  It has three image cards two of which contain animal art, the remaining card contains a riddle image and the riddle rules and is placed between the animal cards. These tree cards sit below the banner image.                                                                                                                                               |
+| Start Quiz  |                                                                                                                                                 This page has a banner image with a welcome message. It has three image cards two of which contain animal art, the final card contains a riddle image and the riddle rules and is placed between the animal cards. These tree cards sit below the banner image.                                                                                                                                                 |
 | Play Quiz   | This page contains the questions and answers for the quiz. Users input their answers in an answer box and click on the check button. When an answer is correct an image of the animal is displayed, a link for further information is provided; and users can click on the next question button to continue the quiz. When an answer is incorrect it is displayed in a warning message which also shows the number of remaining attempts available. When there are three incorrect attempts users receive a 'hard luck' message and the next question displays. |
 | Leaderboard |                                                                                                                                                                                                                          This page provides a leaderboard table with the top ten user scores. It displays rank player name and score.                                                                                                                                                                                                                           |
 
@@ -222,9 +222,9 @@ Several user stories were considered before development began:
     - The project uses **Python** as per instructions.
   
 - [Flask](http://flask.pocoo.org/)
-    - The project uses the flask micro web framework as per instructions.
+    - The project uses the **Flask** micro web framework as per instructions.
   
-**Version Control**
+###Version Control
 
 - The project uses [Git](https://git-scm.com) as it's version control system.
   
@@ -282,7 +282,7 @@ The website has been deployed to [Heroku](https://www.heroku.com/) and can be ac
     ``` 
     $ heroku git:remote -a flask-riddle
     ``` 
-7. Add requirements.txt file (allows heroku to access the projects build pack, not needed when using a Pipenv virtual environment, has been included for reasons of best practice):
+7. Add requirements.txt file (Allows heroku to access the projects build pack. This project uses a Pipenv virtual environment, a Pipfile.lock file is automatically generated which contains the build pack. However, this step has been included for reasons of best practice):
     ``` 
     $ sudo pip3 freeze --local > requirements.txt
     $ git add requirements.txt
@@ -301,15 +301,15 @@ The website has been deployed to [Heroku](https://www.heroku.com/) and can be ac
     ``` 
     $ heroku ps:scale web=1
     ``` 
-1.  Setup config variables on heroku dashboard:
+10. Setup config variables on heroku dashboard:
     - go to settings and click on reveal config vars
     -  Set IP to 0.0.0.0
     -  Set PORT to 5000
 
-2.  Restart dynos:
+11. Restart dynos:
     - Navigate into the 'More' menu and select 'Restart all dynos' to update the apps settings.
 
-3.  Open app:
+12. Open app:
     -Click on the Open 'app' button to view your heroku deployed app in the browser.
 
 
@@ -351,6 +351,7 @@ The Html Fundamentals module, Css Fundamentals module, Python Fundamentals modul
 
 
 - [Google Images](https://www.google.com/search?q=google+images+alex+grey+animal+art&rlz=1C5CHFA_enIE780IE780&tbm=isch&tbo=u&source=univ&sa=X&ved=2ahUKEwjHo727o-PfAhXSC-wKHVndCBMQsAR6BAgGEAE&biw=1062&bih=978) was used for the animal art.
+
 
 
 ### Acknowledgements
