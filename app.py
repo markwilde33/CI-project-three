@@ -226,7 +226,7 @@ def next_question():
             flash('You have completed the Quiz. Your score is ' + str(session['score']), 'success')
             session['index'] = 0
             session['score'] = 0
-            return render_template('start_quiz.html')
+            return render_template('leaderboard.html')
         else:
             return render_template('play_quiz.html', question = get_question())
 
