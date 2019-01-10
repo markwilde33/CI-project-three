@@ -10,7 +10,9 @@
 
 
 
+
 ## Index
+
 
 
 1. [Project Instructions](#instructions-from-code-institute)
@@ -28,7 +30,9 @@
 
 
 
+
 ## Instructions From Code Institute
+
 
 
 Guidelines for project development:
@@ -48,7 +52,9 @@ Guidelines for project development:
 
 
 
+
 ## Riddle Information
+
 
 
 - Players are requested to register and login to play the game. They can then read the rules or began a game immediately.
@@ -65,12 +71,17 @@ Guidelines for project development:
 
 
 
+
 ## UX
+
+
 
 
 ### Wireframes
 
+
 [Pencil](https://pencil.evolus.vn/) was used to create the wireframes.
+
 
 <details>
       <summary><strong><em>Index page</em></strong></summary>
@@ -117,7 +128,9 @@ Guidelines for project development:
 
 
 
+
 ### Design
+
 
 
 - Development of the website adhered to a mobile first approach. The site consists of six pages. It uses a simplistic design with minimal content so users can focus on the riddle game. 
@@ -136,10 +149,13 @@ Guidelines for project development:
 
 
 
+
 ### User Stories
 
 
+
 Several user stories were considered before development began:
+
 
 
 1. "As an animal lover I want to play a simple but engaging quiz game to test my knowledge."
@@ -160,7 +176,9 @@ Several user stories were considered before development began:
 
 
 
+
 ## Features
+
 
 
 | Page        |                                                                                                                                                                                                                                                                           Description                                                                                                                                                                                                                                                                           |
@@ -174,7 +192,9 @@ Several user stories were considered before development began:
 
 
 
+
 ## Existing/Future Technologies
+
 
 
 - Another riddle which unlocks when users get a score of 40 points or more. This riddle would have a further 10 questions about animals and it's own leaderboard.
@@ -183,17 +203,22 @@ Several user stories were considered before development began:
 
 
 
+
 ## Technologies Used
 
 
+
 ### Virtual Environment
+
 
 
 - [Pipenv](https://pipenv.readthedocs.io/en/latest/)
     - The project uses **Pipenv** to set a virtual environment.
 
 
+
 ### Front end
+
 
 
 - [HTML](https://www.w3schools.com/html/default.asp)
@@ -215,7 +240,9 @@ Several user stories were considered before development began:
     - The project uses **JSON** to organize data in files.
   
 
+
 ### Back end
+
 
 
 - [Python](https://www.python.org/)
@@ -223,18 +250,22 @@ Several user stories were considered before development began:
   
 - [Flask](http://flask.pocoo.org/)
     - The project uses the **Flask** micro web framework as per instructions.
-  
 
-###Version Control
+
+
+### Version Control
+
 
 
 - The project uses [Git](https://git-scm.com) as it's version control system.
   
-- The project uses  a  [Github](https://github.com) repository.
+- The project uses  a  [Github](https://github.com/markwilde33/CI-project-three) repository.
 
    
 
+
 ## Testing
+
 
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
@@ -257,7 +288,9 @@ If this section grows too long, you may want to split it off into a separate fil
 
 
 
+
 ## Deployment
+
 
 
 The website has been deployed to [Heroku](https://www.heroku.com/) and can be accessed [here](https://flask-riddle.herokuapp.com/)
@@ -293,7 +326,6 @@ The website has been deployed to [Heroku](https://www.heroku.com/) and can be ac
     $ git commit -m " Added a requirements.txt"
     $ git push heroku master
     ``` 
-      
 8.  Add Procfile (Instructs heroku how start running the project):
     ``` 
     $ echo web: python app.py > Procfile
@@ -306,19 +338,21 @@ The website has been deployed to [Heroku](https://www.heroku.com/) and can be ac
     $ heroku ps:scale web=1
     ``` 
 10. Setup config variables on heroku dashboard:
-    - go to settings and click on reveal config vars
-    -  Set IP to 0.0.0.0
-    -  Set PORT to 5000
+    - Go to settings and click on reveal config vars
+    - Set IP to 0.0.0.0
+    - Set PORT to 5000
 
 11. Restart dynos:
     - Navigate into the 'More' menu and select 'Restart all dynos' to update the apps settings.
 
 12. Open app:
-    -Click on the Open 'app' button to view your heroku deployed app in the browser.
+    - Click on the 'Open app' button to view your heroku deployed app in the browser.
+  
 
 
 
 ## Installation
+
 
 
 ``` 
@@ -334,7 +368,9 @@ App available at http://127.0.0.1:5000/
 
 
 
+
 ## Credits
+
 
 
 [Code Institute](https://codeinstitute.net/)
@@ -346,7 +382,8 @@ The Html Fundamentals module, Css Fundamentals module, Python Fundamentals modul
 ### Content
 
 
-- [wikipedia](https://en.wikipedia.org/wiki/Animal) was used for animal information.
+
+- [Wikipedia](https://en.wikipedia.org/wiki/Animal) was used for animal information.
 - [Youtube](https://www.youtube.com/watch?v=c0IRci0nz14) was used for animal riddles.
 
 
@@ -354,11 +391,13 @@ The Html Fundamentals module, Css Fundamentals module, Python Fundamentals modul
 ### Media
 
 
+
 - [Google Images](https://www.google.com/search?q=google+images+alex+grey+animal+art&rlz=1C5CHFA_enIE780IE780&tbm=isch&tbo=u&source=univ&sa=X&ved=2ahUKEwjHo727o-PfAhXSC-wKHVndCBMQsAR6BAgGEAE&biw=1062&bih=978) was used for the animal art.
 
 
 
 ### Acknowledgements
+
 
 
 - I received inspiration for this project from [Code Institute](https://codeinstitute.net/), [The Net Ninja](https://www.thenetninja.co.uk), [Brad Traversy](https://www.traversymedia.com/) and [Corey Schafer](https://www.youtube.com/user/schafer5/featured).
