@@ -292,7 +292,7 @@ Several user stories were considered before development began:
       <summary><strong><em>Manual Tests</em></strong></summary>
 
   
-#### Index page:
+#### Index Page:
    
 1. Go to the "Index page" page.
 2. Click on the Register button and verify that the user is redirected to the      register page.
@@ -302,7 +302,7 @@ Several user stories were considered before development began:
 6. Click on the link in the footer and verify that it loads on a separate page.
 
 
-#### Register page:
+#### Register Page:
    
 1. On the index page, click on the register button and the register link in the navbar, verify that both these actions take the user to the register page.
 2. Try to submit the empty form and verify that an error message about the         required fields appears.
@@ -310,7 +310,7 @@ Several user stories were considered before development began:
 4. Verify tht the user is taken to the login page when they click on the           optional "Already Registered? Sign In" link below the register button.
 
 
-#### Login page:
+#### Login Page:
    
 1. Try to submit the empty form and verify that an error message about the         required fields appears.
 2. Try to submit the form with an invalid email address and verify that a          relevant error message appears.
@@ -318,7 +318,7 @@ Several user stories were considered before development began:
 4. Try to submit the form with all inputs valid and verify that a success          message appears, and that users are taken to the start quiz page.
    
 
-#### Start_quiz page:
+#### Start Quiz Page:
    
 1. Click on the "Play Quiz" button and verify the play quiz page is loaded.
 2. Click on the "Play Riddle" link in the navbar and verify the play quiz page     is loaded.
@@ -327,7 +327,7 @@ Several user stories were considered before development began:
 5. Verify that images and riddle rules are being displayed.
 
 
-#### Play_quiz page:
+#### Play Quiz Page:
    
 1. Verify that the questions are displaying.
 2. Leave the answer field empty and click on the "Check" answer button. Verify     that the user receives an error message.
@@ -343,7 +343,7 @@ Several user stories were considered before development began:
 12. Verify the user is taken to the start quiz page when the "Finish" button is     clicked, and that their final score is displayed at the top of the screen.
 
 
-#### Leaderboard page:
+#### Leaderboard Page:
    
 1. Verify that the top ten user scores are displayed on the leaderboard page.
 2. Verify that the rank, player name and score of the top ten users are            displayed.
@@ -418,19 +418,20 @@ def get_leaders():
       <summary><strong><em>Miscellaneous</em></strong></summary>
 
 
-#### Further Testing
+### Further Testing
 
-The project has been tested on various browsers, including Chrome, Firefox, Opera, and Safari. Google chrome developer tools where used at every stage of production to
-isolate issues and improve mobile responsiveness. The app was tested across many screen sizes, from very small to very large. It is displaying as intended across various devices and in different browsers.
+- Google chrome developer tools where used at every stage of production to
+isolate issues and improve mobile responsiveness.
+- The app has been tested on various browsers, including Chrome, Firefox, Opera, and Safari.
+- The app was tested across many screen sizes, from very small to very large.
+- It is displaying as intended across various devices and in different browsers.
 
 
-#### Issues
+### Issues
 
-The author is not yet proficient in automated testing, and as such, was unable to adhere to a test driven development approach.
-
-On the start_quiz page, there is an issue with the riddle card displaying at a different height than the animal image cards; on some screen sizes.  
-
-There is some white space between the flashed messages and the navbar. As some pages use full size background images this pushes the images down a little.
+- The author is not yet proficient in automated testing, and as such, was unable to adhere to a test driven development approach.
+- On the start quiz page, there is an issue where, on some screen sizes, the riddle card displays at a different height than the animal image cards.  
+- There is some white space between the flashed messages and the navbar. As some pages use full size background images this pushes the images down a little.
 </details> 
 
 
