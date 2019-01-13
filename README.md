@@ -24,10 +24,6 @@
 4. [Features](#features)
 5. [Technologies](#technologies-used)
 6. [Testing](#testing)
-    * [User Stories](#user-story-tests)
-    * [Manual](#manual-tests)
-    * [Automated](#automated-tests)
-    * [Miscellaneous](#miscellaneous)
 7. [Deployment](#deployment)
 8. [Installation](#installation)
 9.  [Credits](#credits)
@@ -66,12 +62,13 @@ Guidelines for project development:
 - Players are allowed 3 guesses per riddle.
 - Players receive 5 points for each correct answer.
 - Players are deducted 1 point for each incorrect answer.
-- Players are shown a question and can input their answer in the answer field. They click the check button to confirm their answer.
+- Players are shown a question and can input their answer in the answer field. Players click the check button to confirm their answer.
 - When players give a correct answer they receive a success message and are shown an image of the animal. A link with further information regarding the animal is displayed above the image.
 - Players continue with the riddle by clicking on the next question button which displays below the animal image when a correct answer is given.
 - When players give an incorrect answer they receive a warning message which also displays how many attempts they have left.
 - When a player gives 3 incorrect answers they receive a warning message and are taken to the next riddle.
-- On completion of the riddle players receive a message with their final score. They are then directed to the leaderboard page which displays the top ten riddle scores.
+- On completion of the riddle players receive a message with their final score. They are then directed to back to the start quiz page.
+- Players can go to the leaderboard at any time to see if they made the top ten.
 
 
 
@@ -137,9 +134,9 @@ Guidelines for project development:
 
 
 
-- Development of the website adhered to a mobile first approach. The site consists of six pages. It uses a simplistic design with minimal content so users can focus on the riddle game. 
+- Development of the website adhered to a mobile first approach. The site consists of six pages. It uses a simplistic design with minimal content, allowing users to focus on the riddle game. 
   
-- Some psychedelic animal images from the artist [Alex Grey](https://m.alexgrey.com/) were used to give the site some personality. Background images were used on some pages to add depth. An image on the start quiz page is hidden on smaller screens to improve the aesthetic.
+- Some psychedelic animal images from the artist [Alex Grey](https://m.alexgrey.com/)were used to give the site some personality. Background images were used on some pages to add depth. An image on the start quiz page is hidden on smaller screens to improve the aesthetic.
 
 - All pages share the same navbar and footer, though each page has a clear purpose and some unique functionality.
   
@@ -188,11 +185,11 @@ Several user stories were considered before development began:
 | Page        |                                                                                                                                                                                                                                                                           Description                                                                                                                                                                                                                                                                           |
 | :---------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | Index       |                                                                                                                                                                                                                            This the the landing page. It is a basic page with a banner image, a register button and a login button.                                                                                                                                                                                                                             |
-| Register    |                                                                                                                                                                                                                                        This page has a basic form for new users to register. It has a background image.                                                                                                                                                                                                                                         |
+| Register    |                                                                                                                                                                                             This page has a basic form for new users to register. It has a background image. There is also a link to the login page for those users who have previously registered.                                                                                                                                                                                             |
 | Login       |                                                                                                                                                                                                                                            This page has a basic form for users to login. It has a background image.                                                                                                                                                                                                                                            |
 | Start Quiz  |                                                                                                                                                 This page has a banner image with a welcome message. It has three image cards two of which contain animal art, the final card contains a riddle image and the riddle rules and is placed between the animal cards. These tree cards sit below the banner image.                                                                                                                                                 |
 | Play Quiz   | This page contains the questions and answers for the quiz. Users input their answers in an answer box and click on the check button. When an answer is correct an image of the animal is displayed, a link for further information is provided; and users can click on the next question button to continue the quiz. When an answer is incorrect it is displayed in a warning message which also shows the number of remaining attempts available. When there are three incorrect attempts users receive a 'hard luck' message and the next question displays. |
-| Leaderboard |                                                                                                                                                                                                                          This page provides a leaderboard table with the top ten user scores. It displays rank player name and score.                                                                                                                                                                                                                           |
+| Leaderboard |                                                                                                                                                                                                                    This page provides a leaderboard table with the top ten user scores. It displays the user rank, user name and user score.                                                                                                                                                                                                                    |
 
 
 
@@ -275,44 +272,39 @@ Several user stories were considered before development began:
 <details>
       <summary><strong><em>User Story Tests</em></strong></summary>
 
-  ### User Story Tests
 
-
-1. It is a simple animal quiz game.
-2. A user will have their knowledge of animals tested.
-3. Users are shown pictures of each animal for each correct guess.
-4. Users can find out more about each animal by clicking on a link.
-5. Users can register a username and sign in.
-6. Users can play multiple games, and try and beat their previous scores.
-7. Users are welcomed to thr quiz by their unique user name, and can read the          riddle rules.
-8. Users are shown their score when they complete the quiz.
-9. Users can visit a leaderboard to see if they ranked in the top ten.
-10. Multiple users can ply at the sme time, providing they do so from their own         browser.
-11. Users are informed of how many remaining guesses they have left when they input     an incorrect answer.
-12. Users can logout and exit the game at anytime.
+1. Verify that it is a simple animal quiz game.
+2. Verify that a user will have their knowledge of animals tested.
+3. Verify that users are shown pictures of each animal for each correct guess.
+4. Verify that users can find out more about each animal by clicking on a link.
+5. Verify that users can register a username and sign in.
+6. Verify that users can play multiple games, and try and beat their previous scores.
+7. Verify that users are welcomed to the quiz by their unique username, and can read the riddle rules.
+8. Verify that users are shown their score when they complete the quiz.
+9. Verify that users can visit a leaderboard to see if they ranked in the top ten.
+10. Verify that multiple users can play at the same time, providing they do so from their own browser.
+11. Verify that users are informed of how many remaining guesses they have left when they input an incorrect answer.
+12. Verify that users can logout and exit the game at anytime.
 </details> 
 
 
+<details>
+      <summary><strong><em>Manual Tests</em></strong></summary>
 
-
-
-### Manual Tests
-
-
+  
 #### Index page:
    
 1. Go to the "Index page" page.
 2. Click on the Register button and verify that the user is redirected to the      register page.
 3. Click on the Login button and verify that the user is redirected to the         login page.
-4. Users must be logged in to access the leaderboard, play_quiz and start_quiz     pages.
-5. Click on the Play Riddle, Welcome and Leaderboard links in the NavBar and       verify that users are denied access to these pages. 
-6. Verify that users are taken to the register page and receive the following      flashed message "You are unauthorized to perform this action. Please            register and/or login first".
-7. Click on the link in the navbar and verify that it loads on a separate page.
+4. Users must be logged in to access the leaderboard. Click on the Play Riddle, Welcome and Leaderboard links in the navbar and verify that users are denied access to these pages. 
+5. Verify that users are taken to the register page and receive the following      flashed message "You are unauthorized to perform this action. Please            register and/or login first".
+6. Click on the link in the footer and verify that it loads on a separate page.
 
 
 #### Register page:
    
-1. On the index page click on register button and register link in navbar,         verify that both these actions take the user to the register page
+1. On the index page, click on the register button and the register link in the navbar, verify that both these actions take the user to the register page.
 2. Try to submit the empty form and verify that an error message about the         required fields appears.
 3. Try to submit the form with all inputs valid and verify that a success          message appears, and that the user is taken to the login page.
 4. Verify tht the user is taken to the login page when they click on the           optional "Already Registered? Sign In" link below the register button.
@@ -320,19 +312,19 @@ Several user stories were considered before development began:
 
 #### Login page:
    
-1. Try to submit the empty form and verify that an error message about the         required fields appears
+1. Try to submit the empty form and verify that an error message about the         required fields appears.
 2. Try to submit the form with an invalid email address and verify that a          relevant error message appears.
 3. Try to submit the form with an invalid password and verify that a relevant      error message appears.
-4. Try to submit the form with all inputs valid and verify that a success          message appears. and that users are taken to the play_quiz page.
+4. Try to submit the form with all inputs valid and verify that a success          message appears, and that users are taken to the start quiz page.
    
 
 #### Start_quiz page:
    
-1. Click on the "Play Quiz" button and verify the play_quiz page is loaded.
-2. Click on the "Play Riddle" link in the NavBar and verify the play_quiz page     is loaded.
-3. Click on the "Leaderboard" link in the NavBar and verify the leaderboard        page is loaded.
-4. Click on the "Logout" link in the NavBar and verify the user is logged out      and taken to the login page.
-5. Verify that images and riddle rules ae being displayed.
+1. Click on the "Play Quiz" button and verify the play quiz page is loaded.
+2. Click on the "Play Riddle" link in the navbar and verify the play quiz page     is loaded.
+3. Click on the "Leaderboard" link in the navbar and verify the leaderboard        page is loaded.
+4. Click on the "Logout" link in the navbar and verify the user is logged out      and taken to the login page.
+5. Verify that images and riddle rules are being displayed.
 
 
 #### Play_quiz page:
@@ -343,23 +335,23 @@ Several user stories were considered before development began:
 4. Enter three wrong answers and verify that users receive a "hard luck"           warning message, and are taken to the next question.
 5. Enter a correct answer and verify that users receive a success message.
 6. Enter a correct answer and verify an animal image is displayed.
-7. Enter a correct answer and verify a link with additional information about      the animal is displayed, above the animal image.
+7. Enter a correct answer and verify a link with additional information about      the animal is displayed.
 8. Enter a correct answer and verify the "Next Question" button displays.
 9. Click on the "Next Question" button and verify the next question displays.
-10. When a user enters three incorrect answers on the final question, verify        the user is taken to the start_quiz page, where there score is displayed in     a message displayed at the top of the screen.
+10. When a user enters three incorrect answers on the final question, verify        the user is taken to the start quiz page, where there score is displayed in a message at the top of the screen.
 11. When a user correctly guesses the final question, verify that the "Finish"      button displays.
-12. Verify the user is taken to the start_quiz page when the "Finish" button is     clicked, and that their final score is displayed at the top of the screen.
+12. Verify the user is taken to the start quiz page when the "Finish" button is     clicked, and that their final score is displayed at the top of the screen.
 
 
 #### Leaderboard page:
    
 1. Verify that the top ten user scores are displayed on the leaderboard page.
 2. Verify that the rank, player name and score of the top ten users are            displayed.
+</details> 
 
 
-
-### Automated Tests
-
+<details>
+      <summary><strong><em>Automated Tests</em></strong></summary>
 
 
 A file called riddle_tests.py was created using Python's **unittest** class.
@@ -419,11 +411,11 @@ def get_leaders():
 ```
 
 ---
+</details> 
 
 
-
-### Miscellaneous
-
+<details>
+      <summary><strong><em>Miscellaneous</em></strong></summary>
 
 
 #### Further Testing
@@ -434,9 +426,13 @@ isolate issues and improve mobile responsiveness. The app was tested across many
 
 #### Issues
 
+The author is not yet proficient in automated testing, and as such, was unable to adhere to a test driven development approach.
+
 On the start_quiz page, there is an issue with the riddle card displaying at a different height than the animal image cards; on some screen sizes.  
 
-There is some white space between the flashed messages and the NavBar. As some pages use full size background images this pushes the images down a little.
+There is some white space between the flashed messages and the navbar. As some pages use full size background images this pushes the images down a little.
+</details> 
+
 
 
 
@@ -470,7 +466,7 @@ The website has been deployed to [Heroku](https://www.heroku.com/) and can be ac
     ``` 
     $ heroku git:remote -a flask-riddle
     ``` 
-7. Add requirements.txt file (Allows heroku to access the projects build pack. This project uses a Pipenv virtual environment, a Pipfile.lock file is automatically generated which contains the build pack. However, this step has been included for reasons of best practice):
+7. Add requirements.txt file (allows heroku to access the projects build pack. This project uses a Pipenv virtual environment, a Pipfile.lock file is automatically generated which contains the build pack. However, this step has been included for reasons of best practice):
     ``` 
     $ sudo pip3 freeze --local > requirements.txt
     $ git add requirements.txt
@@ -526,7 +522,7 @@ App available at http://127.0.0.1:5000/
 
 [Code Institute](https://codeinstitute.net/)
 
-The Html Fundamentals module, Css Fundamentals module, Python Fundamentals module,Practical Python module and the Data Centric Development module were used for guidance.
+The Html Fundamentals module, CSS Fundamentals module, Python Fundamentals module,Practical Python module and the Data Centric Development module were used for guidance.
 
 
 
