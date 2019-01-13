@@ -272,7 +272,10 @@ Several user stories were considered before development began:
 
 
 
-### User Story Tests
+<details>
+      <summary><strong><em>User Story Tests</em></strong></summary>
+
+  ### User Story Tests
 
 
 1. It is a simple animal quiz game.
@@ -287,13 +290,16 @@ Several user stories were considered before development began:
 10. Multiple users can ply at the sme time, providing they do so from their own         browser.
 11. Users are informed of how many remaining guesses they have left when they input     an incorrect answer.
 12. Users can logout and exit the game at anytime.
+</details> 
+
+
 
 
 
 ### Manual Tests
 
 
-##### Index page:
+#### Index page:
    
 1. Go to the "Index page" page.
 2. Click on the Register button and verify that the user is redirected to the      register page.
@@ -304,7 +310,7 @@ Several user stories were considered before development began:
 7. Click on the link in the navbar and verify that it loads on a separate page.
 
 
-#####  Register page:
+#### Register page:
    
 1. On the index page click on register button and register link in navbar,         verify that both these actions take the user to the register page
 2. Try to submit the empty form and verify that an error message about the         required fields appears.
@@ -312,7 +318,7 @@ Several user stories were considered before development began:
 4. Verify tht the user is taken to the login page when they click on the           optional "Already Registered? Sign In" link below the register button.
 
 
-#####  Login page:
+#### Login page:
    
 1. Try to submit the empty form and verify that an error message about the         required fields appears
 2. Try to submit the form with an invalid email address and verify that a          relevant error message appears.
@@ -320,7 +326,7 @@ Several user stories were considered before development began:
 4. Try to submit the form with all inputs valid and verify that a success          message appears. and that users are taken to the play_quiz page.
    
 
-#####  Start_quiz page:
+#### Start_quiz page:
    
 1. Click on the "Play Quiz" button and verify the play_quiz page is loaded.
 2. Click on the "Play Riddle" link in the NavBar and verify the play_quiz page     is loaded.
@@ -329,7 +335,7 @@ Several user stories were considered before development began:
 5. Verify that images and riddle rules ae being displayed.
 
 
-#####  Play_quiz page:
+#### Play_quiz page:
    
 1. Verify that the questions are displaying.
 2. Leave the answer field empty and click on the "Check" answer button. Verify     that the user receives an error message.
@@ -345,7 +351,7 @@ Several user stories were considered before development began:
 12. Verify the user is taken to the start_quiz page when the "Finish" button is     clicked, and that their final score is displayed at the top of the screen.
 
 
-#####  Leaderboard page:
+#### Leaderboard page:
    
 1. Verify that the top ten user scores are displayed on the leaderboard page.
 2. Verify that the rank, player name and score of the top ten users are            displayed.
@@ -430,6 +436,7 @@ isolate issues and improve mobile responsiveness. The app was tested across many
 
 On the start_quiz page, there is an issue with the riddle card displaying at a different height than the animal image cards; on some screen sizes.  
 
+There is some white space between the flashed messages and the NavBar. As some pages use full size background images this pushes the images down a little.
 
 
 
