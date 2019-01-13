@@ -272,7 +272,7 @@ Several user stories were considered before development began:
 
 
 
-###User Story Tests
+### User Story Tests
 
 
 1. It is a simple animal quiz game.
@@ -290,65 +290,65 @@ Several user stories were considered before development began:
 
 
 
-###Manual Tests
+### Manual Tests
 
 
-1. Index page:
+##### Index page:
    
-    1. Go to the "Index page" page.
-    2. Click on the Register button and verify that the user is redirected to the      register page.
-    3. Click on the Login button and verify that the user is redirected to the         login page.
-    4. Users must be logged in to access the leaderboard, play_quiz and start_quiz     pages.
-    5. Click on the Play Riddle, Welcome and Leaderboard links in the NavBar and       verify that users are denied access to these pages. 
-    6. Verify that users are taken to the register page and receive the following      flashed message "You are unauthorized to perform this action. Please            register and/or login first".
-    7. Click on the link in the navbar and verify that it loads on a separate page.
+1. Go to the "Index page" page.
+2. Click on the Register button and verify that the user is redirected to the      register page.
+3. Click on the Login button and verify that the user is redirected to the         login page.
+4. Users must be logged in to access the leaderboard, play_quiz and start_quiz     pages.
+5. Click on the Play Riddle, Welcome and Leaderboard links in the NavBar and       verify that users are denied access to these pages. 
+6. Verify that users are taken to the register page and receive the following      flashed message "You are unauthorized to perform this action. Please            register and/or login first".
+7. Click on the link in the navbar and verify that it loads on a separate page.
 
 
-2. Register page:
+#####  Register page:
    
-    1. On the index page click on register button and register link in navbar,         verify that both these actions take the user to the register page
-    2. Try to submit the empty form and verify that an error message about the         required fields appears.
-    3. Try to submit the form with all inputs valid and verify that a success          message appears, and that the user is taken to the login page.
-    4. Verify tht the user is taken to the login page when they click on the           optional "Already Registered? Sign In" link below the register button.
+1. On the index page click on register button and register link in navbar,         verify that both these actions take the user to the register page
+2. Try to submit the empty form and verify that an error message about the         required fields appears.
+3. Try to submit the form with all inputs valid and verify that a success          message appears, and that the user is taken to the login page.
+4. Verify tht the user is taken to the login page when they click on the           optional "Already Registered? Sign In" link below the register button.
 
 
-3. Login page:
+#####  Login page:
    
-    1. Try to submit the empty form and verify that an error message about the         required fields appears
-    2. Try to submit the form with an invalid email address and verify that a          relevant error message appears.
-    3. Try to submit the form with an invalid password and verify that a relevant      error message appears.
-    4. Try to submit the form with all inputs valid and verify that a success          message appears. and that users are taken to the play_quiz page.
+1. Try to submit the empty form and verify that an error message about the         required fields appears
+2. Try to submit the form with an invalid email address and verify that a          relevant error message appears.
+3. Try to submit the form with an invalid password and verify that a relevant      error message appears.
+4. Try to submit the form with all inputs valid and verify that a success          message appears. and that users are taken to the play_quiz page.
    
 
-4. Start_quiz page:
+#####  Start_quiz page:
    
-    1. Click on the "Play Quiz" button and verify the play_quiz page is loaded.
-    2. Click on the "Play Riddle" link in the NavBar and verify the play_quiz page     is loaded.
-    3. Click on the "Leaderboard" link in the NavBar and verify the leaderboard        page is loaded.
-    4. Click on the "Logout" link in the NavBar and verify the user is logged out      and taken to the login page.
-    5. Verify that images and riddle rules ae being displayed.
+1. Click on the "Play Quiz" button and verify the play_quiz page is loaded.
+2. Click on the "Play Riddle" link in the NavBar and verify the play_quiz page     is loaded.
+3. Click on the "Leaderboard" link in the NavBar and verify the leaderboard        page is loaded.
+4. Click on the "Logout" link in the NavBar and verify the user is logged out      and taken to the login page.
+5. Verify that images and riddle rules ae being displayed.
 
 
-5. Play_quiz page:
+#####  Play_quiz page:
    
-    1. Verify that the questions are displaying.
-    2. Leave the answer field empty and click on the "Check" answer button. Verify     that the user receives an error message.
-    3. Enter an incorrect answer and verify the user receives a warning; which         displays the answer they gave and shows their remaining attempts.
-    4. Enter three wrong answers and verify that users receive a "hard luck"           warning message, and are taken to the next question.
-    5. Enter a correct answer and verify that users receive a success message.
-    6. Enter a correct answer and verify an animal image is displayed.
-    7. Enter a correct answer and verify a link with additional information about      the animal is displayed, above the animal image.
-    8. Enter a correct answer and verify the "Next Question" button displays.
-    9. Click on the "Next Question" button and verify the next question displays.
-    10. When a user enters three incorrect answers on the final question, verify        the user is taken to the start_quiz page, where there score is displayed in     a message displayed at the top of the screen.
-    11. When a user correctly guesses the final question, verify that the "Finish"      button displays.
-    12. Verify the user is taken to the start_quiz page when the "Finish" button is     clicked, and that their final score is displayed at the top of the screen.
+1. Verify that the questions are displaying.
+2. Leave the answer field empty and click on the "Check" answer button. Verify     that the user receives an error message.
+3. Enter an incorrect answer and verify the user receives a warning; which         displays the answer they gave and shows their remaining attempts.
+4. Enter three wrong answers and verify that users receive a "hard luck"           warning message, and are taken to the next question.
+5. Enter a correct answer and verify that users receive a success message.
+6. Enter a correct answer and verify an animal image is displayed.
+7. Enter a correct answer and verify a link with additional information about      the animal is displayed, above the animal image.
+8. Enter a correct answer and verify the "Next Question" button displays.
+9. Click on the "Next Question" button and verify the next question displays.
+10. When a user enters three incorrect answers on the final question, verify        the user is taken to the start_quiz page, where there score is displayed in     a message displayed at the top of the screen.
+11. When a user correctly guesses the final question, verify that the "Finish"      button displays.
+12. Verify the user is taken to the start_quiz page when the "Finish" button is     clicked, and that their final score is displayed at the top of the screen.
 
 
-6. Leaderboard page:
+#####  Leaderboard page:
    
-    1. Verify that the top ten user scores are displayed on the leaderboard page.
-    2. Verify that the rank, player name and score of the top ten users are            displayed.
+1. Verify that the top ten user scores are displayed on the leaderboard page.
+2. Verify that the rank, player name and score of the top ten users are            displayed.
 
 
 
@@ -416,15 +416,17 @@ def get_leaders():
 
 
 
-###Miscellaneous
+### Miscellaneous
 
-#####Further Testing
+
+
+#### Further Testing
 
 The project has been tested on various browsers, including Chrome, Firefox, Opera, and Safari. Google chrome developer tools where used at every stage of production to
 isolate issues and improve mobile responsiveness. The app was tested across many screen sizes, from very small to very large. It is displaying as intended across various devices and in different browsers.
 
 
-#####Issues
+#### Issues
 
 On the start_quiz page, there is an issue with the riddle card displaying at a different height than the animal image cards; on some screen sizes.  
 
