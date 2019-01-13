@@ -24,9 +24,13 @@
 4. [Features](#features)
 5. [Technologies](#technologies-used)
 6. [Testing](#testing)
+    * [User Stories](#user-story-tests)
+    * [Manual](#manual-tests)
+    * [Automated](#automated-tests)
+    * [Miscellaneous](#miscellaneous)
 7. [Deployment](#deployment)
 8. [Installation](#installation)
-9. [Credits](#credits)
+9.  [Credits](#credits)
 
 
 
@@ -166,7 +170,7 @@ Several user stories were considered before development began:
 
 4. "I want to be welcomed to the quiz by my unique username and have the rules presented to me before I play the game."
 
-5. "On completion of the quiz I want to see my score and visit a leaderboard. Did I make the top ten? If so, were did I rank?"
+5. "On completion of the quiz I want to see my score and be able to visit a leaderboard. Did I make the top ten? If so, were did I rank?"
 
 6. "I want to play the quiz at the same time as my friends, each on our own browsers, and see who does the best."
 
@@ -268,23 +272,161 @@ Several user stories were considered before development began:
 
 
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+###User Story Tests
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+1. It is a simple animal quiz game.
+2. A user will have their knowledge of animals tested.
+3. Users are shown pictures of each animal for each correct guess.
+4. Users can find out more about each animal by clicking on a link.
+5. Users can register a username and sign in.
+6. Users can play multiple games, and try and beat their previous scores.
+7. Users are welcomed to thr quiz by their unique user name, and can read the          riddle rules.
+8. Users are shown their score when they complete the quiz.
+9. Users can visit a leaderboard to see if they ranked in the top ten.
+10. Multiple users can ply at the sme time, providing they do so from their own         browser.
+11. Users are informed of how many remaining guesses they have left when they input     an incorrect answer.
+12. Users can logout and exit the game at anytime.
 
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+###Manual Tests
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+
+1. Index page:
+   
+    1. Go to the "Index page" page.
+    2. Click on the Register button and verify that the user is redirected to the      register page.
+    3. Click on the Login button and verify that the user is redirected to the         login page.
+    4. Users must be logged in to access the leaderboard, play_quiz and start_quiz     pages.
+    5. Click on the Play Riddle, Welcome and Leaderboard links in the NavBar and       verify that users are denied access to these pages. 
+    6. Verify that users are taken to the register page and receive the following      flashed message "You are unauthorized to perform this action. Please            register and/or login first".
+    7. Click on the link in the navbar and verify that it loads on a separate page.
+
+
+2. Register page:
+   
+    1. On the index page click on register button and register link in navbar,         verify that both these actions take the user to the register page
+    2. Try to submit the empty form and verify that an error message about the         required fields appears.
+    3. Try to submit the form with all inputs valid and verify that a success          message appears, and that the user is taken to the login page.
+    4. Verify tht the user is taken to the login page when they click on the           optional "Already Registered? Sign In" link below the register button.
+
+
+3. Login page:
+   
+    1. Try to submit the empty form and verify that an error message about the         required fields appears
+    2. Try to submit the form with an invalid email address and verify that a          relevant error message appears.
+    3. Try to submit the form with an invalid password and verify that a relevant      error message appears.
+    4. Try to submit the form with all inputs valid and verify that a success          message appears. and that users are taken to the play_quiz page.
+   
+
+4. Start_quiz page:
+   
+    1. Click on the "Play Quiz" button and verify the play_quiz page is loaded.
+    2. Click on the "Play Riddle" link in the NavBar and verify the play_quiz page     is loaded.
+    3. Click on the "Leaderboard" link in the NavBar and verify the leaderboard        page is loaded.
+    4. Click on the "Logout" link in the NavBar and verify the user is logged out      and taken to the login page.
+    5. Verify that images and riddle rules ae being displayed.
+
+
+5. Play_quiz page:
+   
+    1. Verify that the questions are displaying.
+    2. Leave the answer field empty and click on the "Check" answer button. Verify     that the user receives an error message.
+    3. Enter an incorrect answer and verify the user receives a warning; which         displays the answer they gave and shows their remaining attempts.
+    4. Enter three wrong answers and verify that users receive a "hard luck"           warning message, and are taken to the next question.
+    5. Enter a correct answer and verify that users receive a success message.
+    6. Enter a correct answer and verify an animal image is displayed.
+    7. Enter a correct answer and verify a link with additional information about      the animal is displayed, above the animal image.
+    8. Enter a correct answer and verify the "Next Question" button displays.
+    9. Click on the "Next Question" button and verify the next question displays.
+    10. When a user enters three incorrect answers on the final question, verify        the user is taken to the start_quiz page, where there score is displayed in     a message displayed at the top of the screen.
+    11. When a user correctly guesses the final question, verify that the "Finish"      button displays.
+    12. Verify the user is taken to the start_quiz page when the "Finish" button is     clicked, and that their final score is displayed at the top of the screen.
+
+
+6. Leaderboard page:
+   
+    1. Verify that the top ten user scores are displayed on the leaderboard page.
+    2. Verify that the rank, player name and score of the top ten users are            displayed.
+
+
+
+### Automated Tests
+
+
+
+A file called riddle_tests.py was created using Python's **unittest** class.
+The two tests in this file are displayed below:
+
+
+*Test 1*
+
+```python
+ def test_get_users(self):
+        """
+        Test to ensure the users list can be retrieved from users.json
+        """
+        users = app.get_users()
+        self.assertEqual(len(users), 1)
+```
+
+*code in app.py*
+
+```python
+USERS = os.path.join(os.path.dirname(
+    os.path.abspath(__file__)) + '/data/users.json')
+
+def get_users():
+    # retrieve users from users.json
+    users = {}
+    with open(USERS) as reader:
+        users = json.load(reader)
+    return users
+```
+
+---
+
+*Test 2*
+
+```python
+def test_get_leaders(self):
+        """
+        Test to ensure the leaders list can be retrieved from leaderboard.json
+        """
+        leaders = app.get_leaders()
+        self.assertEqual(len(leaders), 1)
+```
+
+*code in app.py*
+
+```python
+LEADERBOARD = os.path.join(os.path.dirname(
+    os.path.abspath(__file__)) + '/data/leaderboard.json')
+
+def get_leaders():
+     # retrieve leaders from leaderboard.json
+    leaders = {}
+    with open(LEADERBOARD) as reader:
+        leaders = json.load(reader)
+    return leaders
+```
+
+---
+
+
+
+###Miscellaneous
+
+#####Further Testing
+
+The project has been tested on various browsers, including Chrome, Firefox, Opera, and Safari. Google chrome developer tools where used at every stage of production to
+isolate issues and improve mobile responsiveness. The app was tested across many screen sizes, from very small to very large. It is displaying as intended across various devices and in different browsers.
+
+
+#####Issues
+
+On the start_quiz page, there is an issue with the riddle card displaying at a different height than the animal image cards; on some screen sizes.  
 
 
 

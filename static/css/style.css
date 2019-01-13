@@ -204,10 +204,9 @@ h2 {
 }
 
 /*--------------------------------------------Login & Registration Styles*/
-@import url('https://fonts.googleapis.com/css?family=Numans');
+
 
 .reg-log-img {
-
    background-image: url("../../static/img/snowstar.jpg");
    background-size: cover;
    background-repeat: no-repeat;
