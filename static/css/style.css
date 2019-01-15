@@ -1,4 +1,5 @@
 /*--------------------------------------------Global Styles Styles*/
+
 html,
 body {
    width: 100%;
@@ -10,6 +11,7 @@ body {
 
 
 /*--------------------------------------------Miscellaneous Styles*/
+
 h2 {
    color: white;
 }
@@ -23,12 +25,10 @@ h2 {
 
 }
 
-
 .answer-box-style {
    width: 30%;
    display: inline-block;
 }
-
 
 @media(max-width:600px) {
    .answer-box-style {
@@ -46,7 +46,9 @@ h2 {
    text-align: center;
 }
 
+
 /*--------------------------------------------Button Styles*/
+
 .btn-lg {
    padding: 6px 12px;
    font-size: 20px;
@@ -58,6 +60,7 @@ h2 {
    background-color: #20b2aa;
    border-color: #20b2aa;
 }
+
 
 /*--------------------------------------------Images & Card Styles*/
 
@@ -81,7 +84,6 @@ h2 {
 
 }
 
-
 @media(max-width:780px) {
 
    .card-riddle,
@@ -99,6 +101,7 @@ h2 {
    color: #fff;
    background-color: black;
 }
+
 
 /*--------------------------------------------Jumbotron Styles*/
 
@@ -196,14 +199,12 @@ h2 {
    }
 }
 
-
 .button-styles {
    padding: 10px 10px;
    font-size: 20px;
    border-radius: 10px;
    width: 30%;
 }
-
 
 @media(max-width:900px) {
    .button-styles {
@@ -216,8 +217,8 @@ h2 {
    }
 }
 
-/*--------------------------------------------Login & Registration Styles*/
 
+/*--------------------------------------------Login & Registration Styles*/
 
 .reg-log-img {
    background-image: url("../../static/img/snowstar.jpg");
@@ -257,12 +258,6 @@ h2 {
    border: 0 !important;
 }
 
-input:focus {
-   outline: 0 0 0 0 !important;
-   box-shadow: 0 0 0 0 !important;
-
-}
-
 .login_btn,
 .reg_btn {
    color: white;
@@ -276,6 +271,7 @@ input:focus {
    background-color: white;
 }
 
+
 /*--------------------------------------------Formhelpers Styles*/
 
 .help-inline {
@@ -284,7 +280,6 @@ input:focus {
 
 
 /*--------------------------------------------Footer Styles*/
-
 
 footer,
 footer {
@@ -297,7 +292,6 @@ footer {
 div>a {
    color: #b0c4de;
    font-weight: 500;
-
 
 }
 
@@ -313,7 +307,9 @@ footer {
    z-index: 1030;
 }
 
+
 /*--------------------------------------------Image Styles*/
+
 .img-riddles {
 
    width: 360px;
@@ -334,13 +330,14 @@ footer {
    }
 }
 
+
 /*--------------------------------------------Riddle Page Styles*/
+
 .riddle-styles {
    margin-top: 2rem;
 }
 
 /*--------------------------------------------LeaderBoard Page Styles*/
-
 
 .leaderboard-styles {
    width: 90%;
@@ -357,7 +354,6 @@ footer {
       width: 100%;
       padding-left: 20px;
       padding-right: 20px;
-
 
    }
 }
@@ -391,10 +387,10 @@ tr {
 
 
 /*--------------------------------------------Flashed Messages Styles*/
+
 .alert {
    position: relative;
    padding: .75rem 1.25rem;
    margin-bottom: 0px !important;
    margin-top: 0px !important;
-   /* margin-top: 1rem !important;*/
 }
