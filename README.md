@@ -272,6 +272,7 @@ Several user stories were considered before development began:
 <details>
       <summary><strong><em>User Story Tests</em></strong></summary>
 
+#### User Tests:
 
 1. Verify that it is a simple animal quiz game.
 2. Verify that a user will have their knowledge of animals tested.
@@ -354,7 +355,10 @@ Several user stories were considered before development began:
       <summary><strong><em>Automated Tests</em></strong></summary>
 
 
+#### Unit Tests:
+
 A file called riddle_tests.py was created using Python's **unittest** class.
+
 The two tests in this file are displayed below:
 
 

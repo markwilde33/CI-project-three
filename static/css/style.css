@@ -1,3 +1,4 @@
+/*--------------------------------------------Global Styles Styles*/
 html,
 body {
    width: 100%;
@@ -45,6 +46,7 @@ h2 {
    text-align: center;
 }
 
+/*--------------------------------------------Button Styles*/
 .btn-lg {
    padding: 6px 12px;
    font-size: 20px;
@@ -122,6 +124,7 @@ h2 {
 
 
 /*--------------------------------------------Flash Button Styles*/
+
 /* Found at https://bytutorial.com/blogs/css3/how-to-create-a-flashing-button-using-css3 */
 
 .flash-button {
@@ -274,11 +277,10 @@ input:focus {
 }
 
 /*--------------------------------------------Formhelpers Styles*/
+
 .help-inline {
    color: white !important;
 }
-
-
 
 
 /*--------------------------------------------Footer Styles*/
@@ -388,7 +390,7 @@ tr {
 }
 
 
-/*--------------------------------------------Flashes Messages Styles*/
+/*--------------------------------------------Flashed Messages Styles*/
 .alert {
    position: relative;
    padding: .75rem 1.25rem;
