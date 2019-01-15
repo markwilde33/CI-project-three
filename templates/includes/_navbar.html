@@ -1,3 +1,5 @@
+<!-- Navbar -->
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
    <a class="navbar-brand" href="{{ url_for('play_quiz') }}">Play Riddle</a>
    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
@@ -14,11 +16,13 @@
          </li>
       </ul>
       <ul class="navbar-nav ml-auto">
+         <!-- Only show Logout link in Navbar when user is logged in -->
          {% if session.logged_in %}
          <li class="nav-item">
             <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
          </li>
          {% else %}
+         <!-- Only show Register & Login links in Navbar when user is logged out -->
          <li class="nav-item">
             <a class="nav-link" href="{{ url_for('register') }}">Register</a>
          </li>

@@ -3,6 +3,7 @@
 <div class="container riddle-styles">
    {% from "includes/_formhelpers.html" import render_field %}
    {% if correct_answer %}
+   <!-- On correct answer display "next question button", animal image and animal eternal link. -->
    <form method="POST" action="/next_question">
       <div class="form-group">
       </div>
@@ -11,7 +12,6 @@
             <h3><strong>{{ answer }}</strong></h3>
          </label>
       </div>
-
       <div class="form-group text-center">
          <label for="links"><strong>Find out more about this animal <a href="{{ links }}" target="blank">here</a></strong></label>
       </div>
@@ -27,6 +27,7 @@
       </div>
    </form>
    {% else %}
+   <!-- On incorrect answer display the question again and the wrong answer given. -->
    <form method="POST" action="/riddle" class="mt-5">
       <div class="wrapper question_styles">
          <div class="form-group">
@@ -37,15 +38,13 @@
          <div class="form-group">
             <label for="answer">
                <p>
-                  <h4><strong>Answer:</strong></h4>
+                  <h4><strong>Answer: </strong></h4>
                </p>
             </label>
             <p> <input type="text" name="answer" class="form-control answer-box-style" required="required"></p>
             <p> <input class="btn btn-primary btn-lg" type="submit" value="Check"></p>
          </div>
-
       </div>
-
    </form>
 </div>
 {% endif %}

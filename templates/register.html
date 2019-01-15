@@ -4,6 +4,7 @@
 <div class="wrapper reg-log-img">
    <div class="d-flex justify-content-center ">
       <div class="card">
+         <!-- New users register a username and password. -->
          <div class="card-body text-center">
             {% from "includes/_formhelpers.html" import render_field %}
             <form action="" method="POST">
@@ -19,10 +20,12 @@
                   </div>
                </div>
                <div class="form-group">
+                  <!-- Users submit their details. -->
                   <input type="submit" value="Register" class="btn reg_btn">
                </div>
                <div class="">
                   <small class="text-muted">
+                     <!-- Quick link for users who are already registered. -->
                      Already Registered? <a class="" href="{{ url_for('login') }}">Sign In</a>
                   </small>
                </div>

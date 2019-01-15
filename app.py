@@ -76,7 +76,6 @@ def get_leaders():
     return leaders
 
 
-
 def update_leaderboard():
 # update the leaderboard when user completes the quiz
     existing_leaders = get_leaders()
@@ -84,12 +83,12 @@ def update_leaderboard():
     with open(LEADERBOARD, 'w') as writer:
         json.dump(existing_leaders, writer)
 
+
 @app.route('/')
 # route to index page
 @app.route('/index')
 def index():
     return render_template('index.html')
-
 
 
 class RegisterForm(Form):
@@ -239,9 +238,10 @@ def leaderboard():
     sorted_leaders = sorted(existing_leaders, key = lambda i : (i['score']), reverse=True)
     return render_template('leaderboard.html', leaders = sorted_leaders[:10])
 
+
 if __name__ == '__main__':
     initialize()
     app.secret_key = 'secret'
     app.run(host=os.environ.get('IP'),
             port=os.environ.get('PORT'),
-            debug=True)
+            debug=False)

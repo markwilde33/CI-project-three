@@ -17,6 +17,7 @@
             </tr>
          </thead>
          {% for leader in leaders %}
+         <!-- Loop through players and show their rank, name and score. -->
          <tr>
             <td>{{ loop.index }}</td>
             <td>{{leader['username']}}</td>
