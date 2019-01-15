@@ -136,7 +136,7 @@ Guidelines for project development:
 
 - Development of the website adhered to a mobile first approach. The site consists of six pages. It uses a simplistic design with minimal content, allowing users to focus on the riddle game. 
   
-- Some psychedelic animal images from the artist [Alex Grey](https://m.alexgrey.com/)were used to give the site some personality. Background images were used on some pages to add depth. An image on the start quiz page is hidden on smaller screens to improve the aesthetic.
+- Some psychedelic animal images from the artist [Alex Grey](https://m.alexgrey.com/) were used to give the site some personality. Background images were used on some pages to add depth. An image on the start quiz page is hidden on smaller screens to improve the aesthetic.
 
 - All pages share the same navbar and footer, though each page has a clear purpose and some unique functionality.
   
@@ -187,7 +187,7 @@ Several user stories were considered before development began:
 | Index       |                                                                                                                                                                                                                            This the the landing page. It is a basic page with a banner image, a register button and a login button.                                                                                                                                                                                                                             |
 | Register    |                                                                                                                                                                                             This page has a basic form for new users to register. It has a background image. There is also a link to the login page for those users who have previously registered.                                                                                                                                                                                             |
 | Login       |                                                                                                                                                                                                                                            This page has a basic form for users to login. It has a background image.                                                                                                                                                                                                                                            |
-| Start Quiz  |                                                                                                                                                 This page has a banner image with a welcome message. It has three image cards two of which contain animal art, the final card contains a riddle image and the riddle rules and is placed between the animal cards. These tree cards sit below the banner image.                                                                                                                                                 |
+| Start Quiz  |                                                                                                                                                This page has a banner image with a welcome message. It has three image cards two of which contain animal art, the final card contains a riddle image and the riddle rules, and is placed between the animal cards. These three cards sit below the banner image.                                                                                                                                                |
 | Play Quiz   | This page contains the questions and answers for the quiz. Users input their answers in an answer box and click on the check button. When an answer is correct an image of the animal is displayed, a link for further information is provided; and users can click on the next question button to continue the quiz. When an answer is incorrect it is displayed in a warning message which also shows the number of remaining attempts available. When there are three incorrect attempts users receive a 'hard luck' message and the next question displays. |
 | Leaderboard |                                                                                                                                                                                                                    This page provides a leaderboard table with the top ten user scores. It displays the user rank, user name and user score.                                                                                                                                                                                                                    |
 
@@ -260,7 +260,7 @@ Several user stories were considered before development began:
 
 - The project uses [Git](https://git-scm.com) as it's version control system.
   
-- The project uses  a  [Github](https://github.com/markwilde33/CI-project-three) repository.
+- The project uses  a  [Github](https://github.com/markwilde33) repository.
 
    
 
@@ -295,36 +295,36 @@ Several user stories were considered before development began:
   
 #### Index Page:
    
-1. Go to the "Index page" page.
-2. Click on the Register button and verify that the user is redirected to the      register page.
-3. Click on the Login button and verify that the user is redirected to the         login page.
+1. Open the app.
+2. Click on the Register button and verify that the user is redirected to the register page.
+3. Click on the Login button and verify that the user is redirected to the login page.
 4. Users must be logged in to access the leaderboard. Click on the Play Riddle, Welcome and Leaderboard links in the navbar and verify that users are denied access to these pages. 
-5. Verify that users are taken to the register page and receive the following      flashed message "You are unauthorized to perform this action. Please            register and/or login first".
-6. Click on the link in the footer and verify that it loads on a separate page.
+5. When a user clicks on any of these three links, verify that users are taken to the register page. Moreover, verify that users receive the following flashed message "You are unauthorized to perform this action. Please register and/or login first".
+6. Click on the link in the footer and verify that it loads correctly, and on a separate page.
 
 
 #### Register Page:
    
 1. On the index page, click on the register button and the register link in the navbar, verify that both these actions take the user to the register page.
-2. Try to submit the empty form and verify that an error message about the         required fields appears.
-3. Try to submit the form with all inputs valid and verify that a success          message appears, and that the user is taken to the login page.
-4. Verify tht the user is taken to the login page when they click on the           optional "Already Registered? Sign In" link below the register button.
+2. Try to submit the empty form and verify that an error message about the required fields appears.
+3. Try to submit the form with all inputs valid and verify that a success message appears, and that the user is taken to the login page.
+4. Verify tht the user is taken to the login page when they click on the optional "Already Registered? Sign In" link below the register button.
 
 
 #### Login Page:
    
-1. Try to submit the empty form and verify that an error message about the         required fields appears.
-2. Try to submit the form with an invalid email address and verify that a          relevant error message appears.
-3. Try to submit the form with an invalid password and verify that a relevant      error message appears.
-4. Try to submit the form with all inputs valid and verify that a success          message appears, and that users are taken to the start quiz page.
+1. Try to submit the empty form and verify that an error message about the required fields appears.
+2. Try to submit the form with an invalid username and verify that a relevant error message appears.
+3. Try to submit the form with an invalid password and verify that a relevant error message appears.
+4. Try to submit the form with all inputs valid and verify that a success message appears, and that users are taken to the start quiz page.
    
 
 #### Start Quiz Page:
    
 1. Click on the "Play Quiz" button and verify the play quiz page is loaded.
-2. Click on the "Play Riddle" link in the navbar and verify the play quiz page     is loaded.
-3. Click on the "Leaderboard" link in the navbar and verify the leaderboard        page is loaded.
-4. Click on the "Logout" link in the navbar and verify the user is logged out      and taken to the login page.
+2. Click on the "Play Riddle" link in the navbar and verify the play quiz page is loaded.
+3. Click on the "Leaderboard" link in the navbar and verify the leaderboard page is loaded.
+4. Click on the "Logout" link in the navbar and verify the user is logged out and taken to the login page.
 5. Verify that images and riddle rules are being displayed.
 
 
@@ -445,13 +445,13 @@ isolate issues and improve mobile responsiveness.
 
 
 
-The website has been deployed to [Heroku](https://www.heroku.com/) and can be accessed [here](https://flask-riddle.herokuapp.com/)
+The website has been deployed to [Heroku](https://www.heroku.com) and can be accessed [here](https://flask-riddle.herokuapp.com/)
 
 
 **Heroku Deployment**
 
 
-1. Create an [Heroku](https://www.heroku.com/) account.
+1. Create an [Heroku](https://www.heroku.com) account.
 
 2. Create a new app 'flask-riddle' on heroku.com
 
@@ -478,7 +478,7 @@ The website has been deployed to [Heroku](https://www.heroku.com/) and can be ac
     $ git commit -m " Added a requirements.txt"
     $ git push heroku master
     ``` 
-8.  Add Procfile (Instructs heroku how start running the project):
+8.  Add Procfile (instructs heroku how start running the project):
     ``` 
     $ echo web: python app.py > Procfile
     $ git add Procfile
