@@ -40,9 +40,9 @@ Guidelines for project development:
 
 - The project's logic must be written in Python, HTML and CSS. Use flask, a micro-framework, to structure your project's back-end. 
 - Build a web application game that asks players to guess the answer to a pictorial or text-based riddle.
-- The player is presented with an image or text that contains the riddle. Players enter their answer into a textarea and submit their answer using a form.
+- The player is presented with an image or text that contains the riddle. Players enter their answer into a text area and submit their answer using a form.
 - If a player guesses correctly, they are redirected to the next riddle.
-- If a player guesses incorrectly, their incorrect guess is stored and printed below the riddle. The textarea is cleared so they can guess again.
+- If a player guesses incorrectly, their incorrect guess is stored and printed below the riddle. The text area is cleared so they can guess again.
 - Multiple players can play an instance of the game at the same time, each in their own browser. Users are identified by a unique username, but note that no authentication features such as a password are required for this project.
 - Create a leaderboard that ranks top scores for all (at least recent) users.
 - You should conduct and document tests to ensure that all of your website’s functionality works well.
@@ -184,7 +184,7 @@ Several user stories were considered before development began:
 
 | Page        |                                                                                                                                                                                                                                                                           Description                                                                                                                                                                                                                                                                           |
 | :---------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| Index       |                                                                                                                                                                                                                            This the the landing page. It is a basic page with a banner image, a register button and a login button.                                                                                                                                                                                                                             |
+| Index       |                                                                                                                                                                                                                             This is the landing page. It is a basic page with a banner image, a register button and a login button.                                                                                                                                                                                                                             |
 | Register    |                                                                                                                                                                                             This page has a basic form for new users to register. It has a background image. There is also a link to the login page for those users who have previously registered.                                                                                                                                                                                             |
 | Login       |                                                                                                                                                                                                                                            This page has a basic form for users to login. It has a background image.                                                                                                                                                                                                                                            |
 | Start Quiz  |                                                                                                                                                This page has a banner image with a welcome message. It has three image cards two of which contain animal art, the final card contains a riddle image and the riddle rules, and is placed between the animal cards. These three cards sit below the banner image.                                                                                                                                                |
@@ -206,6 +206,13 @@ Several user stories were considered before development began:
 
 
 ## Technologies Used
+
+### Virtual Environment
+
+
+
+- [Visual Studio Code](https://code.visualstudio.com)
+    - The project was developed using the **Visual Studio Code** code editor.
 
 
 
@@ -308,7 +315,7 @@ Several user stories were considered before development began:
 1. On the index page, click on the register button and the register link in the navbar, verify that both these actions take the user to the register page.
 2. Try to submit the empty form and verify that an error message about the required fields appears.
 3. Try to submit the form with all inputs valid and verify that a success message appears, and that the user is taken to the login page.
-4. Verify tht the user is taken to the login page when they click on the optional "Already Registered? Sign In" link below the register button.
+4. Verify that the user is taken to the login page when they click on the optional "Already Registered? Sign In" link below the register button.
 
 
 #### Login Page:
@@ -324,7 +331,7 @@ Several user stories were considered before development began:
 1. Click on the "Play Quiz" button and verify the play quiz page is loaded.
 2. Click on the "Play Riddle" link in the navbar and verify the play quiz page is loaded.
 3. Click on the "Leaderboard" link in the navbar and verify the leaderboard page is loaded.
-4. Click on the "Logout" link in the navbar and verify the user is logged out and taken to the login page.
+4. Click on the "Logout" link in the navbar and verify the user is logged out and taken to the index page.
 5. Verify that images and riddle rules are being displayed.
 
 
@@ -436,6 +443,9 @@ isolate issues and improve mobile responsiveness.
 - The author is not yet proficient in automated testing, and as such, was unable to adhere to a test driven development approach.
 - On the start quiz page, there is an issue where, on some screen sizes, the riddle card displays at a different height than the animal image cards.  
 - There is some white space between the flashed messages and the navbar. As some pages use full size background images this pushes the images down a little.
+- There was an issue with full screen background images not taking up the full screen space on some smaller mobile screens. As a result, media queries were used to remove background images on some smaller mobile screens.
+
+
 </details> 
 
 

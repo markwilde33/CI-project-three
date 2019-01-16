@@ -166,7 +166,7 @@ def is_logged_in(f):
 def logout():
     session.clear()
     flash('You are now logged out', 'success')
-    return redirect(url_for('login'))
+    return redirect(url_for('index'))
 
 
 @app.route('/start_quiz')
