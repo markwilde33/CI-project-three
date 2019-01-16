@@ -6,7 +6,6 @@ body {
    height: 100%;
    margin: 0px;
    background-color: whitesmoke;
-
 }
 
 
@@ -22,7 +21,6 @@ h2 {
 
 .index-styles {
    margin-top: 180px;
-
 }
 
 .answer-box-style {
@@ -33,7 +31,6 @@ h2 {
 @media(max-width:600px) {
    .answer-box-style {
       width: 50%;
-
    }
 }
 
@@ -80,8 +77,6 @@ h2 {
    height: auto;
    padding: 0;
    margin: 0;
-   /* text-align: center; */
-
 }
 
 @media(max-width:780px) {
@@ -212,21 +207,19 @@ h2 {
       font-size: 20px;
       border-radius: 10px;
       width: 40%;
-
-
    }
 }
 
 
 /*--------------------------------------------Login & Registration Styles*/
-
-.reg-log-img {
-   background-image: url("../../static/img/snowstar.jpg");
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center;
-   height: 100%;
-
+@media (min-height: 533px) {
+   .reg-log-img {
+      background-image: url("../../static/img/snowstar.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 100%;
+   }
 }
 
 .container {
@@ -240,6 +233,16 @@ h2 {
    margin-bottom: auto;
    width: 400px;
    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+@media (max-height: 414px) {
+   .card {
+      padding: 5px 100px;
+      height: 290px;
+      margin-top: 40px;
+      margin-bottom: 90px;
+
+   }
 }
 
 .card-body {
@@ -292,7 +295,6 @@ footer {
 div>a {
    color: #b0c4de;
    font-weight: 500;
-
 }
 
 footer {
@@ -311,7 +313,6 @@ footer {
 /*--------------------------------------------Image Styles*/
 
 .img-riddles {
-
    width: 360px;
    height: 290px;
    border-radius: 1.5rem !important;
@@ -325,8 +326,6 @@ footer {
    .img-riddles {
       width: 280px;
       height: 210px;
-
-
    }
 }
 
@@ -338,15 +337,31 @@ footer {
 }
 
 /*--------------------------------------------LeaderBoard Page Styles*/
+@media (min-height: 601px) {
+   .score-log-img {
+      background-image: url("../../static/img/fog-forest.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 100%;
+   }
+}
 
 .leaderboard-styles {
    width: 90%;
-   padding-top: 100px;
+   padding-top: 50px;
    padding-left: 33px;
    padding-right: 33px;
+   padding-bottom: 50px;
    margin-right: auto;
    margin-left: auto;
+}
 
+@media (max-height: 414px) {
+   .leaderboard-styles {
+      padding-top: 30px;
+      padding-bottom: 40px;
+   }
 }
 
 @media(max-width:568px) {
@@ -354,7 +369,6 @@ footer {
       width: 100%;
       padding-left: 20px;
       padding-right: 20px;
-
    }
 }
 
@@ -373,16 +387,6 @@ table {
 
 tr {
    text-align: center;
-}
-
-.score-log-img {
-
-   background-image: url("../../static/img/fog-forest.jpg");
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center;
-   height: 100%;
-
 }
 
 
