@@ -207,7 +207,7 @@ Several user stories were considered before development began:
 
 ## Technologies Used
 
-### Virtual Environment
+### Code Editor
 
 
 
