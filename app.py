@@ -136,13 +136,13 @@ def login():
                     session['index'] = 0
                     session['attempt'] = MAX_ATTEMPT
                     session['score'] = 0
-                    flash('You are now logged in', 'success')
+                    flash('You are now logged in.', 'success')
                     return redirect(url_for('start_quiz'))
                 else:
                     error = 'Invalid Password'
                     return render_template('login.html', error=error)
         if not is_authenticated:
-            error = 'Username does not exist'
+            error = 'This username does not exist.'
             return render_template('login.html', error=error)
     return render_template('login.html')
 
@@ -155,7 +155,7 @@ def is_logged_in(f):
             return f(*args, **kwargs)
         else:
             flash(
-                'You are unauthorized to perform this action. Please register and/or login first', 'danger')
+                'You are unauthorized to perform this action. Please register and/or login first.', 'danger')
             return redirect(url_for('register'))
     return wrap
 
@@ -165,7 +165,7 @@ def is_logged_in(f):
 @is_logged_in
 def logout():
     session.clear()
-    flash('You are now logged out', 'success')
+    flash('You are now logged out.', 'success')
     return redirect(url_for('index'))
 
 
@@ -199,7 +199,7 @@ def riddle():
         elif session['attempt'] == 1:
             session['score'] += INCORRECT_SCORE
             if session['index'] != len(animal_riddles) - 1:
-                flash('Hard luck!. Try the next riddle.', 'danger')
+                flash('Hard luck! Try the next riddle.', 'danger')
                 session['index'] += 1
                 session['attempt'] = MAX_ATTEMPT
             else:
@@ -207,7 +207,7 @@ def riddle():
         else:
             session['attempt'] -= 1
             session['score'] += INCORRECT_SCORE
-            flash('"' + answer + '" is an incorrect answer. '+ str(session['attempt']) +' attempts remaining', 'warning')
+            flash('"' + answer + '" is an incorrect answer. '+ str(session['attempt']) +' attempts remaining.', 'warning')
         if session['index'] == len(animal_riddles) - 1:
             last_question = True
         return render_template('play_quiz.html', question = get_question(), correct_answer = correct_answer, answer = get_answer(), image = get_image(), last_question = last_question, links = get_links())
@@ -222,7 +222,7 @@ def next_question():
         session['attempt'] = MAX_ATTEMPT
         if session['index'] == len(animal_riddles):
             update_leaderboard()
-            flash('You have completed the Quiz. Your score is ' + str(session['score']), 'success')
+            flash('Congratulations' + ' ' + str(session['name']) + ' you have completed the quiz! You got a fabulous final score of ' + ' ' + str(session['score']) +'.', 'success')
             session['index'] = 0
             session['score'] = 0
             return render_template('start_quiz.html')
