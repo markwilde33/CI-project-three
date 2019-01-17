@@ -261,6 +261,12 @@ h2 {
    border: 0 !important;
 }
 
+input:focus {
+   outline: 0 0 0 0 !important;
+   box-shadow: 0 0 0 0 !important;
+
+}
+
 .login_btn,
 .reg_btn {
    color: white;
