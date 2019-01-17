@@ -435,6 +435,7 @@ def get_leaders():
 isolate issues and improve mobile responsiveness.
 - The app has been tested on various browsers, including Chrome, Firefox, Opera, and Safari.
 - The app was tested across many screen sizes, from very small to very large.
+- Some family members tested the app on their own devices and their recommendations, such as to improve the final quiz score message, were taken on board.
 - It is displaying as intended across various devices and in different browsers.
 
 
@@ -444,6 +445,7 @@ isolate issues and improve mobile responsiveness.
 - On the start quiz page, there is an issue where, on some screen sizes, the riddle card displays at a different height than the animal image cards.  
 - There is some white space between the flashed messages and the navbar. As some pages use full size background images this pushes the images down a little.
 - There was an issue with full screen background images not taking up the full screen space on some smaller mobile screens. As a result, media queries were used to remove background images on some smaller mobile screens.
+- On some devices when a user inputs a word a blank space is included after the word. The user may not notice this blank space. However, it will cause their answer to be incorrect. This may lead to confusion. An answer can be uppercase or lowercase but cannot have blank spaces at the beginning or end of the word.
 
 
 </details> 
